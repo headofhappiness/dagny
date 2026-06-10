@@ -38,7 +38,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba
 .hero-h1 { font-family: var(--head); font-size: clamp(38px, 5vw, 64px); font-weight: 800; line-height: 1.05; color: var(--white); max-width: 700px; margin-bottom: 24px; letter-spacing: -.02em; }
 .hero-h1 em { font-style: italic; font-weight: 400; color: var(--gold-l); }
 .hero-lead { font-size: 18px; font-weight: 300; color: rgba(255,255,255,0.6); max-width: 540px; margin-bottom: 48px; line-height: 1.7; }
-.partner-pills { display: flex; align-items: center; gap: 14px; padding: 24px 0; border-top: 1px solid rgba(255,255,255,0.1); flex-wrap: wrap; }
+.partner-pills { display: flex; align-items: center; gap: 14px; padding: 24px 0; border-top: 1px solid rgba(255,255,255,0.1); flex-wrap: wrap; justify-content: flex-start; }
 .pill { font-family: var(--head); font-size: 12px; font-weight: 700; letter-spacing: .08em; color: var(--white); background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); padding: 9px 20px; border-radius: 40px; }
 .pill.dagny { border-color: rgba(201,168,76,0.4); color: var(--gold-l); }
 .pill.hoh { border-color: rgba(61,139,140,0.5); color: var(--teal-l); }
@@ -267,6 +267,8 @@ footer { background: var(--navy2); padding: 24px 48px; display: flex; justify-co
   .partner-pills { flex-direction: column; gap: 10px; }
   .pill-sep { display: none; }
   .offers-grid, .split-label-row, .split-grid, .day-grid, .shp-box, .contact-grid, .steps-row, .stat-grid, .nudging-grid { grid-template-columns: 1fr !important; }
+  .shp-box { padding: 28px 20px; }
+  .shp-section { padding: 56px 20px; }
   .lunch-bar { grid-column: 1; }
   .split-col { gap: 12px; }
   .step-card { min-height: auto; padding: 28px 24px; }
