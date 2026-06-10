@@ -164,6 +164,16 @@ h2.st span { color: var(--teal); }
 .ll-org { color: var(--gold-l); }
 .ll-pers { color: var(--teal-l); }
 
+/* STEPS ROW – shared with index */
+.steps-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 16px; }
+.step-card { border-radius: 8px; padding: 36px 28px; display: flex; flex-direction: column; min-height: 300px; }
+.step-num { font-family: var(--head); font-size: 56px; font-weight: 800; line-height: 1; margin-bottom: 12px; letter-spacing: -.02em; }
+.step-label { font-family: var(--head); font-size: 10px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; margin-bottom: 10px; }
+.step-divider { width: 40px; height: 2px; margin-bottom: 14px; }
+.step-title { font-family: var(--head); font-size: 15px; font-weight: 700; margin-bottom: 10px; line-height: 1.3; }
+.step-desc { font-size: 13px; line-height: 1.6; flex: 1; }
+.step-sub { font-family: var(--head); font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; margin-top: 14px; padding-top: 12px; }
+
 /* SPLIT SECTION – Org vs Personal */
 .split-section { padding: 88px 48px; background: var(--white); border-bottom: 1px solid var(--border); }
 .split-label-row { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-bottom: 20px; }
@@ -250,7 +260,7 @@ footer { background: var(--navy2); padding: 24px 48px; display: flex; justify-co
   nav { padding: 0 20px; }
   section, .hero, .contact-section { padding-left: 20px; padding-right: 20px; }
   .hero { padding-top: 108px; }
-  .offers-grid, .split-label-row, .split-grid, .day-grid, .shp-box, .contact-grid { grid-template-columns: 1fr; }
+  .offers-grid, .split-label-row, .split-grid, .day-grid, .shp-box, .contact-grid, .steps-row { grid-template-columns: 1fr; }
   .lunch-bar { grid-column: 1; }
   .split-col { gap: 12px; }
   footer { padding: 20px; }
@@ -270,7 +280,7 @@ footer { background: var(--navy2); padding: 24px 48px; display: flex; justify-co
 <section class="hero">
   <div class="hero-inner">
     <p class="hero-tag">Gemensamt program</p>
-    <h1 class="hero-h1">The Full Shift.<br><em>Kropp och hjärna. Hela bilden.</em></h1>
+    <h1 class="hero-h1">The Full Shift.<br><em>Arbetsmiljö och personlig hälsa. Hela bilden.</em></h1>
     <p class="hero-lead">När organisationshälsa och personlig hälsa adresseras tillsammans händer något annat. Medarbetare förstår samspelet – och vet vad de kan göra åt det.</p>
     <div class="partner-pills">
       <span class="pill dagny">Dagny Isberg · Organisationshälsa</span>
@@ -280,265 +290,92 @@ footer { background: var(--navy2); padding: 24px 48px; display: flex; justify-co
   </div>
 </section>
 
-<!-- TWO OFFERS -->
-<section class="offers-section">
-  <div class="wrap">
-    <p class="tag">Två format</p>
-    <h2 class="st">En dag eller tre månader.</h2>
-    <p class="sub">Välj utifrån er situation. Heldagen ger en kraftfull start. Tremånadersprogrammet ger varaktig förändring.</p>
-    <div class="offers-grid">
-      <div class="offer">
-        <p class="offer-badge">Format 1</p>
-        <p class="offer-dur">1 dag · På plats</p>
-        <h3 class="offer-title">The Full Shift Day</h3>
-        <p class="offer-desc">En komplett heldag där Dagny och Head of Happiness tar gruppen igenom organisationshälsa, kropp, stress och levnadsvanor.</p>
-        <ul class="offer-list">
-          <li>Föreläsning organisationshälsa &amp; ergonomi (Dagny, fm)</li>
-          <li>Ergonomiworkshop – praktiska övningar</li>
-          <li>Föreläsning stress, hjärna &amp; levnadsvanor (HoH, em)</li>
-          <li>Individuell hälsoscreening (KEDS)</li>
-          <li>Screening organisationshälsa (OSA-enkäten)</li>
-          <li>Rapport till HR</li>
-          <li>Introduktion till 4 veckors nudging (HoH)</li>
-        </ul>
-      </div>
-      <div class="offer featured">
-        <p class="offer-badge">Format 2 · Rekommenderat</p>
-        <p class="offer-dur">3 månader · Kontinuerligt stöd</p>
-        <h3 class="offer-title">The Full Shift Program</h3>
-        <p class="offer-desc">The Full Shift Day är starten. Sedan jobbar Dagny och Head of Happiness med er organisation i tre månader – tills förändringen faktiskt fastnar.</p>
-        <ul class="offer-list">
-          <li>The Full Shift Day (ingår fullt ut)</li>
-          <li>Individuella samtal 20 min/person (Dagny)</li>
-          <li>Anonymt aggregerad rapport – KEDS &amp; OSA</li>
-          <li>Återkoppling till ledningsgruppen (Dagny)</li>
-          <li>Rekommendationer &amp; handlingsplan</li>
-          <li>8 veckors dagliga mentala övningar via nudging (HoH)</li>
-          <li>Digitalt fördjupningsprogram 3 mån (HoH)</li>
-          <li>Uppföljningsbesök på plats, månad 2 (Dagny)</li>
-          <li>Avslutande screening – mätning av förändring</li>
-        </ul>
-        <div class="tl">
-          <p class="tl-head">Månadsplan</p>
-          <div class="tl-item"><div class="tl-dot"></div><div class="tl-text"><strong>Månad 1</strong> – The Full Shift Day + individuella samtal + screening + nudging startar</div></div>
-          <div class="tl-item"><div class="tl-dot"></div><div class="tl-text"><strong>Månad 2</strong> – Återkoppling till ledning + handlingsplan + uppföljning + nudging period 2</div></div>
-          <div class="tl-item"><div class="tl-dot"></div><div class="tl-text"><strong>Månad 3</strong> – Digitalt program + implementering + avslutande screening</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WHY -->
-<section class="why-section">
-  <div class="wrap">
-    <p class="tag">Varför det här programmet</p>
-    <h2 class="st">De två vanligaste orsakerna<br>till sjukskrivning i Sverige.</h2>
-    <div class="why-intro">
-      <p style="font-size:17px; color:var(--mid); line-height:1.7;">Stress och psykisk ohälsa är en sak. Värk och rörelsebesvär en annan. Men de uppstår inte i ett vakuum – privatliv och arbetsliv driver båda. Det flesta program adresserar det ena. Vi adresserar båda.</p>
-    </div>
-    <div class="stat-grid">
-      <div class="stat-card mental">
-        <p class="stat-num">46%</p>
-        <p class="stat-label">Psykisk ohälsa &amp; stress</p>
-        <p class="stat-desc">Av alla längre sjukskrivningar i Sverige beror idag nästan hälften på psykiatriska diagnoser – och andelen har ökat stadigt sedan 2010. Stressrelaterade besvär är den snabbast växande kategorin.</p>
-        <p class="stat-source">Källa: Skandia / Försäkringskassan 2024</p>
-      </div>
-      <div class="stat-card physical">
-        <p class="stat-num">#2</p>
-        <p class="stat-label">Rörelseorganens sjukdomar</p>
-        <p class="stat-desc">Värk, stelhet och belastningsskador är den näst vanligaste orsaken till sjukskrivning. Många fall är direkt kopplade till arbetsmiljö, ergonomi och hur kroppen används på jobbet.</p>
-        <p class="stat-source">Källa: Försäkringskassan 2024</p>
-      </div>
-    </div>
-    <div class="why-punchline">
-      <div class="why-punchline-icon">↗</div>
-      <div class="why-punchline-text">
-        <h3>Vi adresserar båda. Samtidigt.</h3>
-        <p>Stress uppstår i mötet mellan <strong>privatliv och arbetsliv</strong> – inte bara på jobbet. Kroppen bär på spänningar från båda. Det är därför de flesta insatser inte räcker: de tar bara tag i en del av problemet. The Full Shift arbetar med individen inifrån och organisationen utifrån – på samma gång.</p>
-        <div class="both-badge">
-          <span class="bb gold">Psykisk hälsa · Head of Happiness</span>
-          <span class="bb teal">Kropp &amp; ergonomi · Dagny Isberg</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROGRAM FLOW -->
+<!-- THE PROGRAM – KORT -->
 <section class="flow-section">
   <div class="wrap">
     <p class="tag">Så här arbetar vi tillsammans</p>
-    <h2 class="st" style="color:var(--white);">Individen och organisationen.<br><span>Samtidigt.</span></h2>
-    <p class="sub">Programmet arbetar på två nivåer parallellt – det som stärker den enskilde medarbetaren och det som förändrar organisationen. Ingen av dem räcker ensam.</p>
+    <h2 class="st" style="color:var(--white);">Sex steg.<br><span>Organisation och individ. Samtidigt.</span></h2>
+    <p class="sub">Varje steg bygger på det föregående – och varje steg arbetar på två nivåer parallellt.</p>
 
-    <div class="level-legend">
-      <div class="ll-item ll-org"><div class="ll-dot" style="background:var(--gold)"></div>Organisationsnivå · Dagny Isberg</div>
-      <div class="ll-item ll-pers"><div class="ll-dot" style="background:var(--teal)"></div>Individnivå · Head of Happiness</div>
-    </div>
+    <div class="steps-row">
 
-    <div class="flow-timeline">
-
-      <div class="flow-phase" style="margin-bottom:4px;">
-        <div class="flow-phase-label kickoff">
-          <p class="fpl-num">Fas 1</p>
-          <p class="fpl-title">Uppstart</p>
-          <p class="fpl-sub">Dag 1 · På plats</p>
-        </div>
-        <div class="flow-lanes">
-          <div class="flow-lane org">
-            <p class="fl-who">Organisationsnivå · Dagny</p>
-            <ul class="fl-items">
-              <li>Gemensam föreläsning 3 timmar (Dagny &amp; Lisa)</li>
-              <li>Screening arbetsmiljö – OSA-enkäten</li>
-              <li>Screening risk för utmattning – KEDS</li>
-            </ul>
-          </div>
-          <div class="flow-lane pers">
-            <p class="fl-who">Individnivå · Head of Happiness</p>
-            <ul class="fl-items">
-              <li>Gemensam föreläsning 3 timmar (Dagny &amp; Lisa)</li>
-              <li>Nudging startar – dagliga övningar via mobilen</li>
-              <li>Tillgång till digitalt utbildningsprogram</li>
-            </ul>
-          </div>
-        </div>
+      <!-- RAD 1: Gemensamma uppstegssteg -->
+      <div class="step-card" style="background:var(--gold); border:none;">
+        <div class="step-num" style="color:var(--navy2);">01</div>
+        <p class="step-label" style="color:rgba(34,52,78,0.6);">Föreläsning</p>
+        <div class="step-divider" style="background:rgba(34,52,78,0.2);"></div>
+        <h3 class="step-title" style="color:var(--navy);">Gemensam uppstart – 3 timmar</h3>
+        <p class="step-desc" style="color:rgba(34,52,78,0.7);">Dagny och Lisa föreläser tillsammans. Kropp, arbetsmiljö, stress och levnadsvanor – hela bilden på en gång.</p>
+        <p class="step-sub" style="border-top:1px solid rgba(34,52,78,0.15); color:rgba(34,52,78,0.5);">Dagny Isberg × Head of Happiness</p>
       </div>
 
-      <div class="flow-phase" style="margin-bottom:4px;">
-        <div class="flow-phase-label ongoing">
-          <p class="fpl-num">Fas 2</p>
-          <p class="fpl-title">Löpande stöd</p>
-          <p class="fpl-sub">Månad 1–3</p>
-        </div>
-        <div class="flow-lanes">
-          <div class="flow-lane org">
-            <p class="fl-who">Organisationsnivå · Dagny</p>
-            <ul class="fl-items">
-              <li>20 min individuellt samtal per medarbetare (Dagny)</li>
-            </ul>
-          </div>
-          <div class="flow-lane pers">
-            <p class="fl-who">Individnivå · Head of Happiness</p>
-            <ul class="fl-items">
-              <li>Nudging – dagliga mentala övningar 2 × 4 veckor</li>
-              <li>Digitalt utbildningsprogram, 7 moduler</li>
-            </ul>
-          </div>
-        </div>
+      <div class="step-card" style="background:#243660; border:1.5px solid rgba(201,168,76,0.2);">
+        <div class="step-num" style="color:var(--gold);">02</div>
+        <p class="step-label" style="color:var(--gold);">Screening</p>
+        <div class="step-divider" style="background:rgba(201,168,76,0.35);"></div>
+        <h3 class="step-title" style="color:rgba(255,255,255,0.9);">Mäter nuläget</h3>
+        <p class="step-desc" style="color:rgba(255,255,255,0.55);">Validerade instrument ger insikt i både organisation och individ.</p>
+        <p class="step-sub" style="border-top:1px solid rgba(201,168,76,0.2); color:var(--gold-l); opacity:.8;">Arbetsmiljö · OSA</p>
+        <p class="step-sub" style="border-top:none; padding-top:4px; margin-top:0; color:var(--teal-l); opacity:.8;">Risk för utmattning · KEDS</p>
       </div>
 
-      <div class="flow-phase">
-        <div class="flow-phase-label close">
-          <p class="fpl-num">Fas 3</p>
-          <p class="fpl-title">Insikt &amp; dialog</p>
-          <p class="fpl-sub">Månad 2–3</p>
-        </div>
-        <div class="flow-lanes" style="grid-template-columns:1fr;">
-          <div class="flow-lane both">
-            <p class="fl-who">Dagny Isberg × Head of Happiness</p>
-            <ul class="fl-items">
-              <li>Insiktsrapport – screening KEDS &amp; OSA sammanställs med det Dagny hört i samtalen</li>
-              <li>Återkoppling till ledningsgruppen</li>
-              <li>Dialog om vägen framåt</li>
-            </ul>
-          </div>
-        </div>
+      <div class="step-card" style="background:var(--teal); border:none;">
+        <div class="step-num" style="color:rgba(255,255,255,0.9);">03</div>
+        <p class="step-label" style="color:rgba(255,255,255,0.6);">Nudging &amp; program</p>
+        <div class="step-divider" style="background:rgba(255,255,255,0.25);"></div>
+        <h3 class="step-title" style="color:var(--white);">Dagliga övningar för mental hälsa</h3>
+        <p class="step-desc" style="color:rgba(255,255,255,0.85);">Dagliga övningar via WhatsApp, 2–10 min/dag. Enkla nog att faktiskt göra, effektiva nog att märka skillnad.</p>
+        <p class="step-sub" style="border-top:1px solid rgba(255,255,255,0.2); color:rgba(255,255,255,0.5);">Head of Happiness</p>
+      </div>
+
+      <!-- RAD 2: Löpande och avslut -->
+      <div class="step-card" style="background:var(--gold-p); border:1.5px solid rgba(201,168,76,0.35);">
+        <div class="step-num" style="color:var(--navy);">04</div>
+        <p class="step-label" style="color:var(--gold);">Individuella samtal</p>
+        <div class="step-divider" style="background:rgba(201,168,76,0.4);"></div>
+        <h3 class="step-title" style="color:var(--navy);">20 min med varje person</h3>
+        <p class="step-desc" style="color:var(--mid);">Dagny lyssnar in varje medarbetare – behov, situation och upplevelse. Det finns nästan aldrig bara en orsak till besvär.</p>
+        <p class="step-sub" style="border-top:1px solid rgba(201,168,76,0.25); color:var(--gold);">Dagny Isberg</p>
+      </div>
+
+      <div class="step-card" style="background:var(--navy); border:1.5px solid rgba(201,168,76,0.25);">
+        <div class="step-num" style="color:var(--gold-l);">05</div>
+        <p class="step-label" style="color:var(--gold);">Insiktsrapport</p>
+        <div class="step-divider" style="background:rgba(201,168,76,0.3);"></div>
+        <h3 class="step-title" style="color:var(--white);">Samlad återkoppling till ledningen</h3>
+        <p class="step-desc" style="color:rgba(255,255,255,0.55);">Screening + det Dagny fått till sig i samtalen. Anonymt aggregerat med konkreta rekommendationer.</p>
+        <p class="step-sub" style="border-top:1px solid rgba(255,255,255,0.1); color:rgba(255,255,255,0.3);">Dagny Isberg × Head of Happiness</p>
+      </div>
+
+      <div class="step-card" style="background:var(--teal-p); border:1.5px solid rgba(61,139,140,0.3);">
+        <div class="step-num" style="color:var(--teal);">06</div>
+        <p class="step-label" style="color:var(--teal);">Dialog</p>
+        <div class="step-divider" style="background:rgba(61,139,140,0.3);"></div>
+        <h3 class="step-title" style="color:var(--navy);">Vägen framåt</h3>
+        <p class="step-desc" style="color:var(--mid);">Ledningsgruppen reflekterar internt – sedan möte med Dagny och Lisa om hur ni fortsätter arbetet tillsammans.</p>
+        <p class="step-sub" style="border-top:1px solid rgba(61,139,140,0.2); color:var(--teal);">Dagny Isberg × Head of Happiness</p>
       </div>
 
     </div>
-  </div>
-</section>
 
-<!-- SPLIT: ORG vs PERSONAL -->
-<section class="split-section">
-  <div class="wrap">
-    <p class="tag">Två kompetenser – ett program</p>
-    <h2 class="st">Organisationshälsa <span>möter</span> personlig hälsa.</h2>
-    <p class="sub">Dagny arbetar med organisationen och kroppen. Head of Happiness arbetar med individen och hjärnan. Tillsammans täcker de hela bilden.</p>
-    <div class="split-label-row">
-      <div class="split-label org"><span class="split-label-dot dot-org"></span>Organisationshälsa · Dagny Isberg</div>
-      <div class="split-label pers"><span class="split-label-dot dot-pers"></span>Personlig hälsa · Head of Happiness</div>
+    <!-- NUDGING FÖRDJUPNING -->
+    <div style="margin-top:32px; margin-bottom:12px; display:flex; align-items:center; gap:14px;">
+      <span style="font-family:var(--head); font-size:11px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--teal-l);">03 · Nudging &amp; program – i detalj</span>
+      <span style="flex:1; height:1px; background:rgba(61,139,140,0.25);"></span>
     </div>
-    <div class="split-grid">
-      <div class="split-col">
-        <div class="split-card gold-bg">
-          <p class="sc-num">01 · Föreläsning</p>
-          <h3 class="sc-title">Kropp, ergonomi &amp; MTO</h3>
-          <p class="sc-desc">En mindshift som öppnar ögonen. Medarbetare förstår varför kroppen reagerar som den gör – och vad arbetsgivaren kan göra.</p>
-          <p class="sc-who">Dagny Isberg</p>
-        </div>
-        <div class="split-card white">
-          <p class="sc-num">02 · Screening</p>
-          <h3 class="sc-title">KEDS + OSA-enkäten</h3>
-          <p class="sc-desc">Insikt i individuell hälsa och organisationens mående. Rapport till HR.</p>
-          <p class="sc-who">Dagny Isberg</p>
-        </div>
-        <div class="split-card gold-bg">
-          <p class="sc-num">05 · Återkoppling</p>
-          <h3 class="sc-title">Spegeln till ledningen</h3>
-          <p class="sc-desc">Anonymt aggregerat. Konkreta rekommendationer och dialog om nästa steg.</p>
-          <p class="sc-who">Dagny Isberg</p>
-        </div>
+    <div style="margin-top:6px; display:grid; grid-template-columns:1fr 1fr; gap:6px;">
+      <div style="background:rgba(61,139,140,0.12); border:1.5px solid rgba(61,139,140,0.25); border-radius:8px; padding:36px 32px;">
+        <p style="font-family:var(--head); font-size:10px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--teal-l); margin-bottom:12px;">Nudging · 2 × 4 veckor</p>
+        <h4 style="font-family:var(--head); font-size:17px; font-weight:800; color:var(--white); margin-bottom:14px; line-height:1.2;">Hälsocoach alltid inom räckhåll.</h4>
+        <p style="font-size:14px; color:rgba(255,255,255,0.55); line-height:1.65;">Dagliga övningar att lyssna på och följa via WhatsApp, 2–10 min/dag. Enkla nog att faktiskt göra – effektiva nog att märka skillnad.</p>
       </div>
-      <div class="split-col">
-        <div class="split-card teal-bg">
-          <p class="sc-num">03 · Föreläsning</p>
-          <h3 class="sc-title">Stress, hjärna &amp; levnadsvanor</h3>
-          <p class="sc-desc">Vad är stress egentligen? Vad händer i kroppen – och vad kan varje individ göra för att ta makten över sitt välmående.</p>
-          <p class="sc-who">Head of Happiness</p>
-        </div>
-        <div class="split-card off">
-          <p class="sc-num">04 · Nudging + program</p>
-          <h3 class="sc-title">Dagliga mentala övningar</h3>
-          <p class="sc-desc">2 × 4 veckor med övningar direkt till mobilen. Plus digitalt fördjupningsprogram i 3 månader.</p>
-          <p class="sc-who">Head of Happiness</p>
-        </div>
-        <div class="split-card teal-bg">
-          <p class="sc-num">Gemensamt</p>
-          <h3 class="sc-title">Medarbetar- &amp; arbetsgivaransvar</h3>
-          <p class="sc-desc">Lunch och gemensam reflektion binder ihop perspektiven. Både individen och organisationen tar ansvar.</p>
-          <p class="sc-who">Dagny Isberg × Head of Happiness</p>
-        </div>
+      <div style="background:rgba(61,139,140,0.07); border:1.5px solid rgba(61,139,140,0.2); border-radius:8px; padding:36px 32px;">
+        <p style="font-family:var(--head); font-size:10px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--teal-l); margin-bottom:12px;">Digitalt program · 3 månader</p>
+        <h4 style="font-family:var(--head); font-size:17px; font-weight:800; color:var(--white); margin-bottom:14px; line-height:1.2;">Fördjupning inom stresshantering och välmående.</h4>
+        <p style="font-size:14px; color:rgba(255,255,255,0.55); line-height:1.65;">Evidensbaserat självinstruerande utbildnings- &amp; träningsprogram. Rekommenderat av specialistläkare.</p>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- DAY DETAIL -->
-<section class="day-section">
-  <div class="wrap">
-    <p class="tag">Heldagens upplägg</p>
-    <h2 class="st">Förmiddag kroppen.<br><span>Eftermiddag hjärnan.</span></h2>
-    <p class="sub" style="margin-bottom: 40px;">Lunch binder ihop perspektiven – gemensam reflektion om medarbetar- och arbetsgivaransvar.</p>
-    <div class="day-grid">
-      <div class="day-half gold-side">
-        <p class="day-time">Förmiddag · 09.00–12.00</p>
-        <h3 class="day-title">Organisationshälsa, kropp &amp; ergonomi</h3>
-        <p class="day-who">Dagny Isberg</p>
-        <ul class="day-list">
-          <li>Föreläsning: kroppen, ergonomi &amp; MTO-perspektivet</li>
-          <li>Ergonomiworkshop – konkreta övningar på plats</li>
-          <li>Individuell hälsoscreening (KEDS)</li>
-          <li>OSA-enkäten – organisationshälsa</li>
-        </ul>
-      </div>
-      <div class="day-half teal-side">
-        <p class="day-time">Eftermiddag · 13.00–16.00</p>
-        <h3 class="day-title">Personlig hälsa, stress &amp; levnadsvanor</h3>
-        <p class="day-who">Head of Happiness</p>
-        <ul class="day-list">
-          <li>Föreläsning: stress, prestation &amp; välmående</li>
-          <li>Levnadsvanor &amp; egenmakt – vad kan jag göra själv?</li>
-          <li>Introduktion: 4 veckors dagliga mentala övningar</li>
-          <li>Tillgång till digitalt fördjupningsprogram</li>
-        </ul>
-      </div>
-      <div class="lunch-bar">
-        <div class="lunch-dot"></div>
-        <span class="lunch-text">Lunch &amp; gemensam reflektion · 12.00–13.00 · Medarbetar- och arbetsgivaransvar</span>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -586,7 +423,7 @@ footer { background: var(--navy2); padding: 24px 48px; display: flex; justify-co
         <p class="cp-detail">0735 144 090</p>
       </div>
       <div class="cp">
-        <p class="cp-name">Lisa · Head of Happiness</p>
+        <p class="cp-name">Lisa Jonsson · Head of Happiness</p>
         <p class="cp-role">Personlig hälsa · Stress &amp; levnadsvanor</p>
         <p class="cp-detail">lisa@headofhappiness.se</p>
         <p class="cp-detail">0708 200 894</p>
@@ -597,7 +434,7 @@ footer { background: var(--navy2); padding: 24px 48px; display: flex; justify-co
 
 <footer>
   <span class="footer-logo">Dagny Isberg × Head of Happiness</span>
-  <span class="footer-copy">© 2026 · Kungsbacka · Göteborg · Varberg</span>
+  <span class="footer-copy">Webbplats av Head of Happiness AB · © 2026</span>
 </footer>
 
 </body>
