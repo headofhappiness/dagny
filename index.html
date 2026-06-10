@@ -173,7 +173,7 @@ h2.section-title span { color: var(--teal); }
 .stat-src { font-size: 11px; color: #aaa; margin-top: 4px; }
 
 /* ── QUOTE ── */
-.quote-section { background: var(--navy2); padding: 96px 48px; text-align: center; }
+.quote-section { background: var(--navy2); padding: 96px 48px; text-align: center; border-bottom: 1px solid rgba(201,168,76,0.15); }
 .quote-inner { max-width: 700px; margin: 0 auto; }
 .q-line { width: 48px; height: 2px; background: var(--gold); margin: 0 auto 36px; display: block; }
 .q-text {
@@ -184,7 +184,7 @@ h2.section-title span { color: var(--teal); }
 .q-attr { font-family: var(--head); font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,0.35); }
 
 /* ── HOW ── */
-.how-section { padding: 96px 48px; background: var(--navy2); border-bottom: 1px solid rgba(255,255,255,0.06); }
+.how-section { padding: 96px 48px; background: #1e2e45; border-top: 3px solid var(--gold); border-bottom: 1px solid rgba(255,255,255,0.06); }
 .how-section .tag { color: var(--gold-l); }
 .how-section .tag::before { background: var(--gold); }
 .how-section .section-title { color: var(--white); }
@@ -269,20 +269,27 @@ h2.section-title span { color: var(--teal); }
 
 /* ── PARTNER CTA ── */
 .partner-cta {
-  background: linear-gradient(135deg, var(--teal-p) 0%, var(--gold-p) 100%);
-  border-top: 2px solid var(--teal);
-  padding: 64px 48px;
+  background: var(--navy2);
+  border-top: 3px solid var(--gold);
+  padding: 88px 48px;
 }
-.partner-cta-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 40px; flex-wrap: wrap; }
-.partner-cta-text h3 { font-family: var(--head); font-size: 24px; font-weight: 800; color: var(--navy); margin-bottom: 10px; line-height: 1.2; }
-.partner-cta-text p { font-size: 15px; color: var(--mid); line-height: 1.6; max-width: 480px; }
+.partner-cta-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr auto; gap: 60px; align-items: center; }
+.partner-cta-tag { font-family: var(--head); font-size: 11px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+.partner-cta-tag::before { content: ''; width: 20px; height: 1.5px; background: var(--gold); }
+.partner-cta-text h3 { font-family: var(--head); font-size: clamp(26px, 3vw, 38px); font-weight: 800; color: var(--white); margin-bottom: 16px; line-height: 1.1; letter-spacing: -.02em; }
+.partner-cta-text h3 em { font-style: italic; font-weight: 400; color: var(--gold-l); }
+.partner-cta-text p { font-size: 16px; color: rgba(255,255,255,0.5); line-height: 1.7; max-width: 540px; }
+.partner-pills-row { display: flex; gap: 10px; margin-top: 24px; flex-wrap: wrap; }
+.pp { font-family: var(--head); font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 7px 16px; border-radius: 40px; }
+.pp.gold { background: rgba(201,168,76,0.12); color: var(--gold-l); border: 1px solid rgba(201,168,76,0.25); }
+.pp.teal { background: rgba(61,139,140,0.12); color: var(--teal-l); border: 1px solid rgba(61,139,140,0.25); }
 .btn-teal {
-  font-family: var(--head); font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
-  background: var(--teal); color: var(--white); border: none; padding: 16px 36px;
+  font-family: var(--head); font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  background: var(--gold); color: var(--navy); border: none; padding: 20px 44px;
   cursor: pointer; text-decoration: none; display: inline-block; border-radius: 3px; white-space: nowrap;
   transition: background .2s, transform .15s;
 }
-.btn-teal:hover { background: var(--teal-l); transform: translateY(-2px); }
+.btn-teal:hover { background: var(--gold-l); transform: translateY(-2px); }
 
 /* ── SERVICES ── */
 .services-section { padding: 96px 48px; background: var(--white); border-bottom: 1px solid var(--border); }
@@ -352,7 +359,8 @@ footer { background: var(--navy2); padding: 24px 48px; display: flex; justify-co
   .nav-links { display: none; }
   .hero, section, .partner-cta, .services-section, .contact-section { padding-left: 20px; padding-right: 20px; }
   .hero { padding-top: 108px; padding-bottom: 60px; }
-  .mto-grid, .stats, .steps, .pkg-grid, .about-grid, .contact-grid, .svc-grid { grid-template-columns: 1fr; }
+  .mto-grid, .stats, .steps-row, .pkg-grid, .about-grid, .contact-grid, .svc-grid { grid-template-columns: 1fr; }
+  .partner-cta-inner { grid-template-columns: 1fr; }
   .svc-sub-grid { grid-template-columns: 1fr; }
   .stats { gap: 10px; }
   .partner-cta-inner { flex-direction: column; }
@@ -420,9 +428,9 @@ footer { background: var(--navy2); padding: 24px 48px; display: flex; justify-co
       </div>
     </div>
     <div class="stats">
-      <div class="stat"><div class="stat-num">1 av 4</div><div class="stat-label">i arbete upplever hälsoproblem relaterat till arbetet</div><div class="stat-src">AV Arbetsmiljöstatistik 2023</div></div>
-      <div class="stat"><div class="stat-num">75%</div><div class="stat-label">av de drabbade rapporterar trötthet och utmattning</div><div class="stat-src">AV Arbetsmiljöstatistik 2023</div></div>
-      <div class="stat"><div class="stat-num">65%</div><div class="stat-label">rapporterar fysisk värk – näst vanligaste sjukskrivningsorsaken</div><div class="stat-src">AV Arbetsmiljöstatistik 2023</div></div>
+      <div class="stat"><div class="stat-num">46%</div><div class="stat-label">av längre sjukskrivningar beror på psykisk ohälsa – orsak nr 1</div><div class="stat-src">Försäkringskassan 2024</div></div>
+      <div class="stat"><div class="stat-num">18%</div><div class="stat-label">beror på rörelseorganens sjukdomar – värk, axlar och rygg</div><div class="stat-src">Försäkringskassan 2024</div></div>
+      <div class="stat"><div class="stat-num">8,6</div><div class="stat-label">sjukdagar per anställd och år – upp från 7,5 dagar 2019</div><div class="stat-src">Skandia 2025</div></div>
       <div class="stat"><div class="stat-num">~100 tkr</div><div class="stat-label">kostar varje fall av långtidssjukfrånvaro arbetsgivaren</div><div class="stat-src">Uppskattad genomsnittskostnad</div></div>
     </div>
   </div>
@@ -514,7 +522,7 @@ footer { background: var(--navy2); padding: 24px 48px; display: flex; justify-co
         <p class="step-label">Individuella samtal</p>
         <div class="step-divider"></div>
         <h3 class="step-title">20 minuter med varje person</h3>
-        <p class="step-desc">Dagny lyssnar in varje medarbetare – behov, situation och upplevelse. Det finns nästan aldrig bara en orsak.</p>
+        <p class="step-desc">Dagny lyssnar in varje medarbetare – behov, situation och upplevelse. Det finns nästan aldrig bara en orsak till besvär.</p>
       </div>
 
       <div class="step-card c4">
@@ -522,7 +530,7 @@ footer { background: var(--navy2); padding: 24px 48px; display: flex; justify-co
         <p class="step-label">Insiktsrapport</p>
         <div class="step-divider"></div>
         <h3 class="step-title">Samlad återkoppling till ledningen</h3>
-        <p class="step-desc">Screening + det Dagny hört i samtalen. Anonymt aggregerat med konkreta rekommendationer.</p>
+        <p class="step-desc">Screening + det Dagny fått till sig i samtalen. Anonymt aggregerat med konkreta rekommendationer.</p>
       </div>
 
       <div class="step-card c5">
@@ -541,8 +549,13 @@ footer { background: var(--navy2); padding: 24px 48px; display: flex; justify-co
 <div class="partner-cta">
   <div class="partner-cta-inner">
     <div class="partner-cta-text">
-      <h3>Vill ni adressera kropp <em>och</em> hjärna samtidigt?</h3>
-      <p>Dagny samarbetar med Head of Happiness i <strong>The Full Shift</strong> – ett gemensamt program där ergonomi, stress och levnadsvanor möts på en dag eller i ett tremånaderspaket.</p>
+      <p class="partner-cta-tag">Samarbete · The Full Shift</p>
+      <h3>Organisationshälsa möter<br><em>personlig hälsa.</em></h3>
+      <p>Dagny samarbetar med Head of Happiness i ett gemensamt program – <strong style="color:rgba(255,255,255,0.8)">The Full Shift</strong>. Dagny arbetar med kropp, ergonomi och arbetsmiljö. Head of Happiness med stress, levnadsvanor och välmående. Tillsammans adresserar ni de två vanligaste orsakerna till sjukskrivning.</p>
+      <div class="partner-pills-row">
+        <span class="pp gold">Dagny Isberg · Organisationshälsa</span>
+        <span class="pp teal">Head of Happiness · Personlig hälsa</span>
+      </div>
     </div>
     <a href="partner.html" class="btn-teal">Se The Full Shift →</a>
   </div>
@@ -612,7 +625,7 @@ footer { background: var(--navy2); padding: 24px 48px; display: flex; justify-co
       <div>
         <p class="tag">Om Dagny</p>
         <h2 class="section-title">Skarp i blicken.<br><span>Varm i mötet.</span></h2>
-        <p class="about-body">Dagny Isberg kombinerar en gedigen bakgrund som senior HR-konsult med djup kompetens inom medicinsk massageterapi och belastningsergonomi. Det är en kombination som är ovanlig – och kraftfull.</p>
+        <p class="about-body">Dagny Isberg kombinerar en gedigen bakgrund som senior HR-konsult med djup kompetens inom organisationshälsa och belastningsergonomi. Det är en kombination som är ovanlig – och kraftfull.</p>
         <p class="about-body">Hon förstår hur en organisation fungerar inifrån – inte bara i teorin, utan på riktigt. Vad som händer när möten staplas, kommunikationen brister och kroppen till slut skickar en signal som inte går att ignorera.</p>
         <p class="about-body">Med glimten i ögat och en förmåga att göra det komplicerade begripligt får Dagny folk att förstå sin kropp och sin vardag på ett nytt sätt. Och vilja göra något åt det.</p>
         <ul class="cred-list">
@@ -655,7 +668,7 @@ footer { background: var(--navy2); padding: 24px 48px; display: flex; justify-co
 
 <footer>
   <span class="footer-logo">Dagny Isberg · Dagen Gry AB</span>
-  <span class="footer-copy">© 2026 · Kungsbacka</span>
+  <span class="footer-copy">Webbplats av Head of Happiness AB · © 2026</span>
 </footer>
 
 </body>
