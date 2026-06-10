@@ -184,23 +184,50 @@ h2.section-title span { color: var(--teal); }
 .q-attr { font-family: var(--head); font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,0.35); }
 
 /* ── HOW ── */
-.how-section { padding: 96px 48px; background: var(--white); border-bottom: 1px solid var(--border); }
-.steps { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--border); border-radius: 8px; overflow: hidden; border: 1.5px solid var(--border); }
-.step { padding: 48px 40px; position: relative; }
-.step.w { background: var(--white); }
-.step.g { background: var(--off); }
+.how-section { padding: 96px 48px; background: var(--navy2); border-bottom: 1px solid rgba(255,255,255,0.06); }
+.how-section .tag { color: var(--gold-l); }
+.how-section .tag::before { background: var(--gold); }
+.how-section .section-title { color: var(--white); }
+.how-section .section-title span { color: var(--gold-l); }
+.how-section .section-sub { color: rgba(255,255,255,0.45); }
+.steps-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; margin-top: 16px; }
+.step-card { border-radius: 8px; padding: 36px 28px; display: flex; flex-direction: column; min-height: 340px; }
+.step-card.c1 { background: var(--navy); border: 1.5px solid rgba(201,168,76,0.2); }
+.step-card.c2 { background: #243660; border: 1.5px solid rgba(201,168,76,0.15); }
+.step-card.c3 { background: var(--gold); }
+.step-card.c4 { background: var(--gold-p); border: 1.5px solid rgba(201,168,76,0.3); }
+.step-card.c5 { background: var(--navy); border: 1.5px solid rgba(201,168,76,0.2); }
 .step-num {
-  font-family: var(--head); font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase;
-  color: var(--teal); margin-bottom: 14px; display: flex; align-items: center; gap: 10px;
+  font-family: var(--head); font-size: 52px; font-weight: 800; line-height: 1;
+  margin-bottom: 14px; letter-spacing: -.02em;
 }
-.step-num::before { content: ''; width: 18px; height: 1.5px; background: var(--teal); }
-.step-title { font-family: var(--head); font-size: 20px; font-weight: 700; color: var(--navy); margin-bottom: 12px; line-height: 1.2; }
-.step-desc { font-size: 14px; color: var(--mid); line-height: 1.65; }
-.step-badge {
-  display: inline-block; margin-top: 16px;
-  font-family: var(--head); font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
-  color: var(--teal); background: var(--teal-p); border: 1px solid rgba(61,139,140,0.2); padding: 4px 12px; border-radius: 20px;
+.step-card.c1 .step-num, .step-card.c2 .step-num, .step-card.c5 .step-num { color: var(--gold); }
+.step-card.c3 .step-num { color: var(--navy); }
+.step-card.c4 .step-num { color: var(--navy); }
+.step-label {
+  font-family: var(--head); font-size: 10px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase;
+  margin-bottom: 10px;
 }
+.step-card.c1 .step-label, .step-card.c2 .step-label, .step-card.c5 .step-label { color: var(--gold); }
+.step-card.c3 .step-label { color: var(--navy); }
+.step-card.c4 .step-label { color: var(--navy); }
+.step-divider { width: 48px; height: 2px; margin-bottom: 16px; }
+.step-card.c1 .step-divider, .step-card.c2 .step-divider, .step-card.c5 .step-divider { background: rgba(201,168,76,0.4); }
+.step-card.c3 .step-divider { background: rgba(34,52,78,0.3); }
+.step-card.c4 .step-divider { background: rgba(34,52,78,0.2); }
+.step-title { font-family: var(--head); font-size: 15px; font-weight: 700; margin-bottom: 10px; line-height: 1.3; }
+.step-card.c1 .step-title, .step-card.c2 .step-title, .step-card.c5 .step-title { color: rgba(255,255,255,0.9); }
+.step-card.c3 .step-title { color: var(--navy); }
+.step-card.c4 .step-title { color: var(--navy); }
+.step-desc { font-size: 13px; line-height: 1.6; flex: 1; }
+.step-card.c1 .step-desc, .step-card.c2 .step-desc, .step-card.c5 .step-desc { color: rgba(255,255,255,0.55); }
+.step-card.c3 .step-desc { color: rgba(34,52,78,0.75); }
+.step-card.c4 .step-desc { color: var(--mid); }
+.step-sub { font-family: var(--head); font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; margin-top: 16px; padding-top: 14px; }
+.step-card.c1 .step-sub, .step-card.c2 .step-sub { border-top: 1px solid rgba(201,168,76,0.2); color: rgba(201,168,76,0.6); }
+.step-card.c3 .step-sub { border-top: 1px solid rgba(34,52,78,0.15); color: rgba(34,52,78,0.5); }
+.step-card.c4 .step-sub { border-top: 1px solid rgba(34,52,78,0.1); color: var(--mid); }
+.step-card.c5 .step-sub { border-top: 1px solid rgba(201,168,76,0.2); color: rgba(201,168,76,0.6); }
 
 /* ── PACKAGES ── */
 .pkg-section { padding: 96px 48px; background: var(--off); border-bottom: 1px solid var(--border); }
@@ -339,8 +366,7 @@ footer { background: var(--navy2); padding: 24px 48px; display: flex; justify-co
 <nav>
   <span class="nav-logo">Dagny <span>Isberg</span></span>
   <div class="nav-links">
-    <a href="#hur-det-funkar">Hur det funkar</a>
-    <a href="#paket">Paket</a>
+    <a href="#hur-det-funkar">Så här funkar det</a>
     <a href="#tjanster">Tjänster</a>
     <a href="#om-dagny">Om Dagny</a>
     <a href="#kontakt">Kontakt</a>
@@ -356,7 +382,7 @@ footer { background: var(--navy2); padding: 24px 48px; display: flex; justify-co
     <p class="hero-lead">Dagny Isberg förstår vardagen inifrån – hur det känns att sitta i för många möten, bära på för mycket och ändå försöka prestera. Med ett helhetsperspektiv som få besitter hjälper hon medarbetare och ledning att förstå vad som faktiskt skapar belastning – och vad ni kan göra åt det.</p>
     <div class="hero-btns">
       <a href="#hur-det-funkar" class="btn-primary">Så här funkar det</a>
-      <a href="#paket" class="btn-ghost">Se paketen</a>
+      <a href="#kontakt" class="btn-ghost">Boka samtal</a>
     </div>
     <div class="hero-proof">
       <span class="proof-item"><span class="proof-dot"></span>Evidensbaserat</span>
@@ -452,102 +478,61 @@ footer { background: var(--navy2); padding: 24px 48px; display: flex; justify-co
 <div class="quote-section">
   <div class="quote-inner">
     <span class="q-line"></span>
-    <p class="q-text">"Det borde vara en <strong>no-brainer.</strong>"</p>
-    <p class="q-attr">Dagny Isberg – om varför arbetsgivare bör investera i medarbetares hälsa</p>
+    <p class="q-text">"Det borde vara en<br><strong>no-brainer."</strong></p>
+    <p class="q-attr">Dagny Isberg – om att investera i medarbetares hälsa</p>
   </div>
 </div>
 
 <!-- HOW IT WORKS -->
 <section class="how-section" id="hur-det-funkar">
   <div class="section-wrap">
-    <p class="tag">Så här funkar det</p>
-    <h2 class="section-title">Föreläsning som öppnar ögonen.<br><span>Samtal som berättar. Data som leder.</span></h2>
-    <p class="section-sub">Dagny börjar alltid med föreläsningen – den skapar gemensam förståelse och vilja att förändra.</p>
-    <div class="steps">
-      <div class="step w">
-        <p class="step-num">Steg 1 · Föreläsning</p>
-        <h3 class="step-title">Mindshift för hela gruppen</h3>
-        <p class="step-desc">45–120 minuter om kroppen, ergonomi och det moderna arbetslivet. Medarbetare förstår – och vill förändra. Dagny är en mindshifter som skapar både medarbetaransvar och arbetsgivaransvar i samma rum.</p>
-        <span class="step-badge">Ingår i Mindshift-programmet</span>
-      </div>
-      <div class="step g">
-        <p class="step-num">Steg 2 · Individuella samtal</p>
-        <h3 class="step-title">20 minuter med varje person</h3>
-        <p class="step-desc">Varje medarbetare känner sig sedd och hörd. Dagny lyssnar, identifierar flera orsaker bakom besvären och ger individen verktyg för självledarskap. Det finns nästan aldrig bara en orsak.</p>
-        <span class="step-badge">Ingår i Mindshift-programmet</span>
-      </div>
-      <div class="step g">
-        <p class="step-num">Steg 3 · Återkoppling</p>
-        <h3 class="step-title">Spegeln till ledningsgruppen</h3>
-        <p class="step-desc">Anonymt aggregerat: hur mår era medarbetare egentligen? Vad fungerar bra? Var behövs förändring? Konkreta rekommendationer baserade på vad Dagny faktiskt hörde.</p>
-        <span class="step-badge">Ingår i Mindshift-programmet</span>
-      </div>
-      <div class="step w">
-        <p class="step-num">Steg 4 · Dialog</p>
-        <h3 class="step-title">Vad gör ni nu?</h3>
-        <p class="step-desc">Dagny presenterar rekommendationerna och ni diskuterar vägen framåt – vad ni kan göra själva och var ni behöver stöd. Hon har ett nätverk av specialister för fördjupade insatser.</p>
-        <span class="step-badge">Ingår i Mindshift-programmet</span>
-      </div>
-    </div>
-  </div>
-</section>
+    <p class="tag">Så här arbetar Dagny med er organisation</p>
+    <h2 class="section-title">Fem steg.<br><span>Ett helhetsgrepp.</span></h2>
+    <p class="section-sub">Varje steg bygger på det föregående – från gemensam förståelse till konkret förändring.</p>
+    <div class="steps-row">
 
-<!-- PACKAGES -->
-<section class="pkg-section" id="paket">
-  <div class="section-wrap">
-    <p class="tag">Paket</p>
-    <h2 class="section-title">Tre tydliga nivåer.</h2>
-    <p class="section-sub">Från en skarp uppstartsdag till ett heltäckande tremånaderspaket. Börja med Mindshift-dagen och bygg vidare.</p>
-    <div class="pkg-grid">
-      <div class="pkg">
-        <p class="pkg-badge">Grundpaket</p>
-        <p class="pkg-dur">1 dag · På plats</p>
-        <h3 class="pkg-name">Mindshift-dagen</h3>
-        <p class="pkg-line">En hel dag som sätter igång förändringen. Ger hela gruppen ett gemensamt språk och en gemensam vilja att förändra.</p>
-        <ul class="pkg-list">
-          <li>Föreläsning för hela gruppen (45–90 min)</li>
-          <li>Ergonomiworkshop – praktiska övningar</li>
-          <li>Individuell hälsoscreening (KEDS)</li>
-          <li>Screening organisationshälsa (OSA-enkäten)</li>
-          <li>Rapport till HR</li>
-        </ul>
+      <div class="step-card c1">
+        <div class="step-num">01</div>
+        <p class="step-label">Föreläsning</p>
+        <div class="step-divider"></div>
+        <h3 class="step-title">Mindshift för hela gruppen</h3>
+        <p class="step-desc">45–120 minuter om kroppen, ergonomi och det moderna arbetslivet. Medarbetare förstår – och vill förändra.</p>
       </div>
-      <div class="pkg featured">
-        <p class="pkg-badge">Rekommenderat</p>
-        <p class="pkg-dur">3 månader · Kontinuerligt stöd</p>
-        <h3 class="pkg-name">Mindshift-programmet</h3>
-        <p class="pkg-line">Mindshift-dagen är starten. Sedan jobbar Dagny med er organisation i tre månader – tills förändringen faktiskt fastnar.</p>
-        <ul class="pkg-list">
-          <li>Mindshift-dagen (ingår fullt ut)</li>
-          <li>Individuella samtal, 20 min/person</li>
-          <li>Dagny identifierar orsaker – inte bara symptom</li>
-          <li>Anonymt aggregerad rapport – KEDS &amp; OSA</li>
-          <li>Återkoppling till ledningsgruppen</li>
-          <li>Rekommendationer &amp; handlingsplan</li>
-          <li>Dialog om nästa steg</li>
-        </ul>
-        <div class="tl">
-          <p class="tl-head">Månadsplan</p>
-          <div class="tl-item"><div class="tl-dot"></div><div class="tl-text"><strong>Månad 1</strong> – Mindshift-dagen + individuella samtal + screening</div></div>
-          <div class="tl-item"><div class="tl-dot"></div><div class="tl-text"><strong>Månad 2</strong> – Återkoppling till ledning + handlingsplan + uppföljning</div></div>
-          <div class="tl-item"><div class="tl-dot"></div><div class="tl-text"><strong>Månad 3</strong> – Implementering + ny screening för mätning</div></div>
-        </div>
+
+      <div class="step-card c2">
+        <div class="step-num">02</div>
+        <p class="step-label">Screening</p>
+        <div class="step-divider"></div>
+        <h3 class="step-title">Mäter nuläget</h3>
+        <p class="step-desc">Validerade instrument ger insikt i organisationens mående.</p>
+        <p class="step-sub">Arbetsmiljö · OSA</p>
+        <p class="step-sub" style="border-top:none; padding-top:4px; margin-top:0;">Risk för utmattning · KEDS</p>
       </div>
-      <div class="pkg">
-        <p class="pkg-badge">Löpande partnerskap</p>
-        <p class="pkg-dur">Kontinuerligt · Skräddarsytt</p>
-        <h3 class="pkg-name">Strategisk hälsopartner</h3>
-        <p class="pkg-line">Dagny som er fasta externa hälsokonsult med hela kompetenspaletten och tillgång till ett brett nätverk.</p>
-        <ul class="pkg-list">
-          <li>Mindshift-programmet (ingår fullt ut)</li>
-          <li>Återkommande besök &amp; uppföljning</li>
-          <li>Stöd i systematiskt hälsoarbete</li>
-          <li>Medicinsk massageterapi &amp; prehab/rehab</li>
-          <li>Löpcoaching &amp; funktionell träning</li>
-          <li>HLR-utbildning (2026 års riktlinjer)</li>
-          <li>Tillgång till specialistnätverk</li>
-        </ul>
+
+      <div class="step-card c3">
+        <div class="step-num">03</div>
+        <p class="step-label">Individuella samtal</p>
+        <div class="step-divider"></div>
+        <h3 class="step-title">20 minuter med varje person</h3>
+        <p class="step-desc">Dagny lyssnar in varje medarbetare – behov, situation och upplevelse. Det finns nästan aldrig bara en orsak.</p>
       </div>
+
+      <div class="step-card c4">
+        <div class="step-num">04</div>
+        <p class="step-label">Insiktsrapport</p>
+        <div class="step-divider"></div>
+        <h3 class="step-title">Samlad återkoppling till ledningen</h3>
+        <p class="step-desc">Screening + det Dagny hört i samtalen. Anonymt aggregerat med konkreta rekommendationer.</p>
+      </div>
+
+      <div class="step-card c5">
+        <div class="step-num">05</div>
+        <p class="step-label">Dialog</p>
+        <div class="step-divider"></div>
+        <h3 class="step-title">Vägen framåt</h3>
+        <p class="step-desc">Ledningsgruppen reflekterar internt – sedan möte med Dagny om nästa steg och hur ni fortsätter arbetet.</p>
+      </div>
+
     </div>
   </div>
 </section>
