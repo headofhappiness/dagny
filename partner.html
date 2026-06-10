@@ -81,6 +81,89 @@ h2.st span { color: var(--teal); }
 .tl-text { font-size: 12px; color: rgba(255,255,255,0.45); line-height: 1.4; }
 .tl-text strong { color: rgba(255,255,255,0.7); }
 
+/* WHY SECTION */
+.why-section { padding: 88px 48px; background: var(--white); border-bottom: 1px solid var(--border); }
+.why-intro { max-width: 640px; margin-bottom: 56px; }
+.stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; margin-bottom: 48px; }
+.stat-card { padding: 44px 40px; border-radius: 8px; }
+.stat-card.mental { background: var(--navy); }
+.stat-card.physical { background: var(--off); border: 1.5px solid var(--border); }
+.stat-num { font-family: var(--head); font-size: 72px; font-weight: 800; line-height: 1; margin-bottom: 8px; letter-spacing: -.03em; }
+.stat-card.mental .stat-num { color: var(--gold-l); }
+.stat-card.physical .stat-num { color: var(--navy); }
+.stat-label { font-family: var(--head); font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 14px; }
+.stat-card.mental .stat-label { color: rgba(255,255,255,0.45); }
+.stat-card.physical .stat-label { color: var(--mid); }
+.stat-desc { font-size: 15px; line-height: 1.6; }
+.stat-card.mental .stat-desc { color: rgba(255,255,255,0.6); }
+.stat-card.physical .stat-desc { color: var(--mid); }
+.stat-source { font-size: 11px; margin-top: 16px; }
+.stat-card.mental .stat-source { color: rgba(255,255,255,0.25); }
+.stat-card.physical .stat-source { color: var(--border); }
+.why-punchline { background: var(--gold-p); border: 1.5px solid rgba(201,168,76,0.3); border-radius: 8px; padding: 40px 44px; display: flex; align-items: flex-start; gap: 32px; }
+.why-punchline-icon { font-size: 32px; flex-shrink: 0; line-height: 1; margin-top: 4px; }
+.why-punchline-text h3 { font-family: var(--head); font-size: 22px; font-weight: 800; color: var(--navy); margin-bottom: 10px; line-height: 1.2; }
+.why-punchline-text p { font-size: 15px; color: var(--mid); line-height: 1.65; }
+.why-punchline-text strong { color: var(--navy); font-weight: 700; }
+.both-badge { display: inline-flex; align-items: center; gap: 8px; margin-top: 18px; }
+.bb { font-family: var(--head); font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; padding: 7px 16px; border-radius: 40px; }
+.bb.gold { background: var(--gold); color: var(--navy); }
+.bb.teal { background: var(--teal-p); color: var(--teal); border: 1.5px solid rgba(61,139,140,0.3); }
+
+/* PROGRAM FLOW */
+.flow-section { padding: 88px 48px; background: var(--navy2); border-bottom: 1px solid rgba(255,255,255,0.06); }
+.flow-section .tag { color: var(--gold-l); }
+.flow-section .tag::before { background: var(--gold); }
+.flow-section h2.st { color: var(--white); }
+.flow-section h2.st span { color: var(--gold-l); }
+.flow-section .sub { color: rgba(255,255,255,0.45); }
+
+.flow-timeline { position: relative; margin-top: 16px; }
+
+/* Phase blocks */
+.flow-phase { display: grid; grid-template-columns: 200px 1fr; gap: 0; margin-bottom: 4px; border-radius: 8px; overflow: hidden; }
+.flow-phase-label { padding: 32px 28px; display: flex; flex-direction: column; justify-content: center; }
+.flow-phase-label.kickoff { background: var(--gold); }
+.flow-phase-label.ongoing { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); }
+.flow-phase-label.close { background: rgba(201,168,76,0.15); border: 1px solid rgba(201,168,76,0.25); }
+.fpl-num { font-family: var(--head); font-size: 10px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; margin-bottom: 6px; }
+.flow-phase-label.kickoff .fpl-num { color: rgba(34,52,78,0.6); }
+.flow-phase-label.ongoing .fpl-num { color: rgba(255,255,255,0.35); }
+.flow-phase-label.close .fpl-num { color: var(--gold); }
+.fpl-title { font-family: var(--head); font-size: 17px; font-weight: 800; line-height: 1.2; }
+.flow-phase-label.kickoff .fpl-title { color: var(--navy); }
+.flow-phase-label.ongoing .fpl-title { color: rgba(255,255,255,0.7); }
+.flow-phase-label.close .fpl-title { color: var(--gold-l); }
+.fpl-sub { font-size: 12px; margin-top: 5px; }
+.flow-phase-label.kickoff .fpl-sub { color: rgba(34,52,78,0.55); }
+.flow-phase-label.ongoing .fpl-sub { color: rgba(255,255,255,0.3); }
+.flow-phase-label.close .fpl-sub { color: rgba(201,168,76,0.6); }
+
+/* Two-lane content */
+.flow-lanes { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; }
+.flow-lane { padding: 28px 32px; }
+.flow-lane.org { background: rgba(201,168,76,0.07); border-left: 3px solid var(--gold); }
+.flow-lane.pers { background: rgba(61,139,140,0.07); border-left: 3px solid var(--teal); }
+.flow-lane.both { background: rgba(255,255,255,0.04); border-left: 3px solid rgba(255,255,255,0.2); }
+.fl-who { font-family: var(--head); font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 12px; }
+.flow-lane.org .fl-who { color: var(--gold); }
+.flow-lane.pers .fl-who { color: var(--teal-l); }
+.flow-lane.both .fl-who { color: rgba(255,255,255,0.35); }
+.fl-items { list-style: none; }
+.fl-items li { font-size: 14px; color: rgba(255,255,255,0.55); padding: 7px 0; border-bottom: 1px solid rgba(255,255,255,0.06); display: flex; gap: 10px; align-items: flex-start; line-height: 1.4; }
+.fl-items li:last-child { border-bottom: none; }
+.fl-items li::before { font-weight: 700; flex-shrink: 0; font-size: 13px; }
+.flow-lane.org .fl-items li::before { content: '–'; color: var(--gold); }
+.flow-lane.pers .fl-items li::before { content: '–'; color: var(--teal-l); }
+.flow-lane.both .fl-items li::before { content: '–'; color: rgba(255,255,255,0.25); }
+
+/* Level legend */
+.level-legend { display: flex; gap: 24px; margin-bottom: 32px; flex-wrap: wrap; }
+.ll-item { display: flex; align-items: center; gap: 10px; font-family: var(--head); font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.ll-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+.ll-org { color: var(--gold-l); }
+.ll-pers { color: var(--teal-l); }
+
 /* SPLIT SECTION – Org vs Personal */
 .split-section { padding: 88px 48px; background: var(--white); border-bottom: 1px solid var(--border); }
 .split-label-row { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-bottom: 20px; }
@@ -242,6 +325,127 @@ footer { background: var(--navy2); padding: 24px 48px; display: flex; justify-co
           <div class="tl-item"><div class="tl-dot"></div><div class="tl-text"><strong>Månad 3</strong> – Digitalt program + implementering + avslutande screening</div></div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why-section">
+  <div class="wrap">
+    <p class="tag">Varför det här programmet</p>
+    <h2 class="st">De två vanligaste orsakerna<br>till sjukskrivning i Sverige.</h2>
+    <div class="why-intro">
+      <p style="font-size:17px; color:var(--mid); line-height:1.7;">Stress och psykisk ohälsa är en sak. Värk och rörelsebesvär en annan. Men de uppstår inte i ett vakuum – privatliv och arbetsliv driver båda. Det flesta program adresserar det ena. Vi adresserar båda.</p>
+    </div>
+    <div class="stat-grid">
+      <div class="stat-card mental">
+        <p class="stat-num">46%</p>
+        <p class="stat-label">Psykisk ohälsa &amp; stress</p>
+        <p class="stat-desc">Av alla längre sjukskrivningar i Sverige beror idag nästan hälften på psykiatriska diagnoser – och andelen har ökat stadigt sedan 2010. Stressrelaterade besvär är den snabbast växande kategorin.</p>
+        <p class="stat-source">Källa: Skandia / Försäkringskassan 2024</p>
+      </div>
+      <div class="stat-card physical">
+        <p class="stat-num">#2</p>
+        <p class="stat-label">Rörelseorganens sjukdomar</p>
+        <p class="stat-desc">Värk, stelhet och belastningsskador är den näst vanligaste orsaken till sjukskrivning. Många fall är direkt kopplade till arbetsmiljö, ergonomi och hur kroppen används på jobbet.</p>
+        <p class="stat-source">Källa: Försäkringskassan 2024</p>
+      </div>
+    </div>
+    <div class="why-punchline">
+      <div class="why-punchline-icon">↗</div>
+      <div class="why-punchline-text">
+        <h3>Vi adresserar båda. Samtidigt.</h3>
+        <p>Stress uppstår i mötet mellan <strong>privatliv och arbetsliv</strong> – inte bara på jobbet. Kroppen bär på spänningar från båda. Det är därför de flesta insatser inte räcker: de tar bara tag i en del av problemet. The Full Shift arbetar med individen inifrån och organisationen utifrån – på samma gång.</p>
+        <div class="both-badge">
+          <span class="bb gold">Psykisk hälsa · Head of Happiness</span>
+          <span class="bb teal">Kropp &amp; ergonomi · Dagny Isberg</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAM FLOW -->
+<section class="flow-section">
+  <div class="wrap">
+    <p class="tag">Så här arbetar vi tillsammans</p>
+    <h2 class="st" style="color:var(--white);">Individen och organisationen.<br><span>Samtidigt.</span></h2>
+    <p class="sub">Programmet arbetar på två nivåer parallellt – det som stärker den enskilde medarbetaren och det som förändrar organisationen. Ingen av dem räcker ensam.</p>
+
+    <div class="level-legend">
+      <div class="ll-item ll-org"><div class="ll-dot" style="background:var(--gold)"></div>Organisationsnivå · Dagny Isberg</div>
+      <div class="ll-item ll-pers"><div class="ll-dot" style="background:var(--teal)"></div>Individnivå · Head of Happiness</div>
+    </div>
+
+    <div class="flow-timeline">
+
+      <div class="flow-phase" style="margin-bottom:4px;">
+        <div class="flow-phase-label kickoff">
+          <p class="fpl-num">Fas 1</p>
+          <p class="fpl-title">Uppstart</p>
+          <p class="fpl-sub">Dag 1 · På plats</p>
+        </div>
+        <div class="flow-lanes">
+          <div class="flow-lane org">
+            <p class="fl-who">Organisationsnivå · Dagny</p>
+            <ul class="fl-items">
+              <li>Gemensam föreläsning 3 timmar (Dagny &amp; Lisa)</li>
+              <li>Screening arbetsmiljö – OSA-enkäten</li>
+              <li>Screening risk för utmattning – KEDS</li>
+            </ul>
+          </div>
+          <div class="flow-lane pers">
+            <p class="fl-who">Individnivå · Head of Happiness</p>
+            <ul class="fl-items">
+              <li>Gemensam föreläsning 3 timmar (Dagny &amp; Lisa)</li>
+              <li>Nudging startar – dagliga övningar via mobilen</li>
+              <li>Tillgång till digitalt utbildningsprogram</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-phase" style="margin-bottom:4px;">
+        <div class="flow-phase-label ongoing">
+          <p class="fpl-num">Fas 2</p>
+          <p class="fpl-title">Löpande stöd</p>
+          <p class="fpl-sub">Månad 1–3</p>
+        </div>
+        <div class="flow-lanes">
+          <div class="flow-lane org">
+            <p class="fl-who">Organisationsnivå · Dagny</p>
+            <ul class="fl-items">
+              <li>20 min individuellt samtal per medarbetare (Dagny)</li>
+            </ul>
+          </div>
+          <div class="flow-lane pers">
+            <p class="fl-who">Individnivå · Head of Happiness</p>
+            <ul class="fl-items">
+              <li>Nudging – dagliga mentala övningar 2 × 4 veckor</li>
+              <li>Digitalt utbildningsprogram, 7 moduler</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-phase">
+        <div class="flow-phase-label close">
+          <p class="fpl-num">Fas 3</p>
+          <p class="fpl-title">Insikt &amp; dialog</p>
+          <p class="fpl-sub">Månad 2–3</p>
+        </div>
+        <div class="flow-lanes" style="grid-template-columns:1fr;">
+          <div class="flow-lane both">
+            <p class="fl-who">Dagny Isberg × Head of Happiness</p>
+            <ul class="fl-items">
+              <li>Insiktsrapport – screening KEDS &amp; OSA sammanställs med det Dagny hört i samtalen</li>
+              <li>Återkoppling till ledningsgruppen</li>
+              <li>Dialog om vägen framåt</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
