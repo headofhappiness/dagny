@@ -128,7 +128,7 @@ h2.section-title span { color: var(--teal); }
 .section-sub em { font-style: italic; color: var(--mid); font-size: 15px; }
 
 /* ── MTO ── */
-.mto-section { padding: 96px 48px; background: var(--off); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.mto-section { padding: 96px 48px; background: var(--white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 .mto-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 52px; }
 .mto-card {
   padding: 40px 32px; border-radius: 6px; border: 1.5px solid transparent;
@@ -167,10 +167,10 @@ h2.section-title span { color: var(--teal); }
 
 /* STAT ROW */
 .stats { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; }
-.stat { background: var(--white); border: 1.5px solid var(--border); border-radius: 6px; padding: 28px 24px; }
-.stat-num { font-family: var(--head); font-size: 32px; font-weight: 800; color: var(--teal); line-height: 1; margin-bottom: 8px; }
-.stat-label { font-size: 13px; color: var(--mid); line-height: 1.4; }
-.stat-src { font-size: 11px; color: #aaa; margin-top: 4px; }
+.stat { background: var(--navy); border: 1.5px solid rgba(201,168,76,0.15); border-radius: 6px; padding: 28px 24px; }
+.stat-num { font-family: var(--head); font-size: 32px; font-weight: 800; color: var(--gold-l); line-height: 1; margin-bottom: 8px; }
+.stat-label { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.4; }
+.stat-src { font-size: 11px; color: rgba(255,255,255,0.25); margin-top: 4px; }
 
 /* ── QUOTE ── */
 .quote-section { background: var(--navy2); padding: 96px 48px; text-align: center; border-bottom: 1px solid rgba(201,168,76,0.15); }
@@ -184,12 +184,12 @@ h2.section-title span { color: var(--teal); }
 .q-attr { font-family: var(--head); font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,0.35); }
 
 /* ── HOW ── */
-.how-section { padding: 96px 48px; background: #1e2e45; border-top: 3px solid var(--gold); border-bottom: 1px solid rgba(255,255,255,0.06); }
-.how-section .tag { color: var(--gold-l); }
-.how-section .tag::before { background: var(--gold); }
-.how-section .section-title { color: var(--white); }
-.how-section .section-title span { color: var(--gold-l); }
-.how-section .section-sub { color: rgba(255,255,255,0.45); }
+.how-section { padding: 96px 48px; background: var(--off); border-top: 3px solid var(--gold); border-bottom: 1px solid var(--border); }
+.how-section .tag { color: var(--teal); }
+.how-section .tag::before { background: var(--teal); }
+.how-section .section-title { color: var(--navy); }
+.how-section .section-title span { color: var(--gold); }
+.how-section .section-sub { color: var(--mid); }
 .steps-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; margin-top: 16px; }
 .step-card { border-radius: 8px; padding: 36px 28px; display: flex; flex-direction: column; min-height: 340px; }
 .step-card.c1 { background: var(--navy); border: 1.5px solid rgba(201,168,76,0.2); }
@@ -359,11 +359,15 @@ footer { background: var(--navy2); padding: 24px 48px; display: flex; justify-co
   .nav-links { display: none; }
   .hero, section, .partner-cta, .services-section, .contact-section { padding-left: 20px; padding-right: 20px; }
   .hero { padding-top: 108px; padding-bottom: 60px; }
-  .mto-grid, .stats, .steps-row, .pkg-grid, .about-grid, .contact-grid, .svc-grid { grid-template-columns: 1fr; }
-  .partner-cta-inner { grid-template-columns: 1fr; }
+  .mto-grid, .stats, .steps-row, .pkg-grid, .about-grid, .contact-grid, .svc-grid { grid-template-columns: 1fr !important; }
+  .partner-cta-inner { grid-template-columns: 1fr !important; }
   .svc-sub-grid { grid-template-columns: 1fr; }
   .stats { gap: 10px; }
-  .partner-cta-inner { flex-direction: column; }
+  .step-card { min-height: auto; padding: 28px 24px; }
+  .step-num { font-size: 40px; }
+  .partner-cta { padding: 56px 20px; }
+  .mto-section, .how-section, .quote-section { padding-left: 20px; padding-right: 20px; }
+  .hero-proof { gap: 16px; flex-wrap: wrap; }
   footer { padding: 20px; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; transform: none !important; } }
@@ -387,7 +391,7 @@ footer { background: var(--navy2); padding: 24px 48px; display: flex; justify-co
   <div class="hero-inner">
     <p class="hero-tag">Konsult Arbetshälsa &amp; Ergonomi</p>
     <h1 class="hero-h1">Kroppen berättar.<br><em>Hon lyssnar.</em></h1>
-    <p class="hero-lead">Dagny Isberg förstår vardagen inifrån – hur det känns att sitta i för många möten, bära på för mycket och ändå försöka prestera. Med ett helhetsperspektiv som få besitter hjälper hon medarbetare och ledning att förstå vad som faktiskt skapar belastning – och vad ni kan göra åt det.</p>
+    <p class="hero-lead">Dagny Isberg förstår vardagen inifrån – hur det känns att sitta i för många möten, bära på för mycket och ändå alltid försöka prestera sitt bästa. Trots stress och värk. Med ett helhetsperspektiv som få besitter hjälper hon medarbetare och ledning att förstå vad som faktiskt skapar belastning – och vad ni kan göra åt det.</p>
     <div class="hero-btns">
       <a href="#hur-det-funkar" class="btn-primary">Så här funkar det</a>
       <a href="#kontakt" class="btn-ghost">Boka samtal</a>
@@ -624,7 +628,7 @@ footer { background: var(--navy2); padding: 24px 48px; display: flex; justify-co
     <div class="about-grid">
       <div>
         <p class="tag">Om Dagny</p>
-        <h2 class="section-title">Skarp i blicken.<br><span>Varm i mötet.</span></h2>
+        <h2 class="section-title">Glimten i ögat.<br><span>Skarp i sinnet.</span></h2>
         <p class="about-body">Dagny Isberg kombinerar en gedigen bakgrund som senior HR-konsult med djup kompetens inom organisationshälsa och belastningsergonomi. Det är en kombination som är ovanlig – och kraftfull.</p>
         <p class="about-body">Hon förstår hur en organisation fungerar inifrån – inte bara i teorin, utan på riktigt. Vad som händer när möten staplas, kommunikationen brister och kroppen till slut skickar en signal som inte går att ignorera.</p>
         <p class="about-body">Med glimten i ögat och en förmåga att göra det komplicerade begripligt får Dagny folk att förstå sin kropp och sin vardag på ett nytt sätt. Och vilja göra något åt det.</p>
