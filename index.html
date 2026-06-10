@@ -353,13 +353,16 @@ footer { background: var(--navy2); padding: 24px 48px; display: flex; justify-co
 .footer-logo { font-family: var(--head); font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,0.3); }
 .footer-copy { font-family: var(--head); font-size: 11px; color: rgba(255,255,255,0.2); }
 
+/* ── MYTH BUSTER ── */
+.myth-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
   nav { padding: 0 20px; }
   .nav-links { display: none; }
   .hero, section, .partner-cta, .services-section, .contact-section { padding-left: 20px; padding-right: 20px; }
   .hero { padding-top: 108px; padding-bottom: 60px; }
-  .mto-grid, .stats, .steps-row, .pkg-grid, .about-grid, .contact-grid, .svc-grid { grid-template-columns: 1fr !important; }
+  .mto-grid, .stats, .steps-row, .pkg-grid, .about-grid, .contact-grid, .svc-grid, .myth-grid { grid-template-columns: 1fr !important; }
   .partner-cta-inner { grid-template-columns: 1fr !important; }
   .svc-sub-grid { grid-template-columns: 1fr; }
   .stats { gap: 10px; }
@@ -444,7 +447,7 @@ footer { background: var(--navy2); padding: 24px 48px; display: flex; justify-co
 <!-- MYTH BUSTER -->
 <section style="padding: 88px 48px; background: var(--white); border-bottom: 1px solid var(--border);">
   <div class="section-wrap">
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;">
+    <div class="myth-grid">
 
       <!-- LEFT: the myth -->
       <div>
