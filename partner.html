@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Full Shift – Dagny Isberg × Head of Happiness</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --navy:   #22344e; --navy2: #1a2a3f;
+  --gold:   #C9A84C; --gold-l: #E8C97A; --gold-p: #F5EDD8;
+  --teal:   #3D8B8C; --teal-l: #5AABAC; --teal-p: #E0F0F0;
+  --peach:  #eab189; --rust:   #bf6a5b; --peach-p: #FDF0E8;
+  --white:  #FFFFFF; --off:    #F8F6F2; --light: #EEEbE4;
+  --text:   #1e2a38; --mid:    #5a6370; --border: #DDD9D0;
+  --head:   'Montserrat', sans-serif; --body: 'Open Sans', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { font-family: var(--body); background: var(--white); color: var(--text); font-size: 16px; line-height: 1.7; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(255,255,255,0.97); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(34,52,78,0.08); display: flex; justify-content: space-between; align-items: center; padding: 0 48px; height: 68px; }
+.nav-logo { font-family: var(--head); font-size: 15px; font-weight: 800; letter-spacing: .06em; color: var(--navy); text-decoration: none; }
+.nav-logo span { color: var(--teal); }
+.nav-back { font-family: var(--head); font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--mid); text-decoration: none; display: flex; align-items: center; gap: 6px; transition: color .2s; }
+.nav-back:hover { color: var(--teal); }
+.nav-cta { font-family: var(--head); font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; background: var(--navy); color: var(--white); border: none; padding: 12px 28px; cursor: pointer; text-decoration: none; border-radius: 3px; transition: background .2s; }
+.nav-cta:hover { background: var(--teal); }
+
+/* HERO */
+.hero { background: var(--navy2); padding: 148px 48px 96px; position: relative; overflow: hidden; }
+.hero::after { content: ''; position: absolute; top: 0; right: 0; width: 50%; height: 100%; background: linear-gradient(135deg, transparent 30%, rgba(61,139,140,0.08) 60%, rgba(201,168,76,0.06) 100%); pointer-events: none; }
+.hero-inner { max-width: 1100px; margin: 0 auto; }
+.hero-tag { display: inline-flex; align-items: center; gap: 10px; font-family: var(--head); font-size: 11px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-l); margin-bottom: 28px; }
+.hero-tag::before { content: ''; width: 28px; height: 1px; background: var(--gold); }
+.hero-h1 { font-family: var(--head); font-size: clamp(38px, 5vw, 64px); font-weight: 800; line-height: 1.05; color: var(--white); max-width: 700px; margin-bottom: 24px; letter-spacing: -.02em; }
+.hero-h1 em { font-style: italic; font-weight: 400; color: var(--gold-l); }
+.hero-lead { font-size: 18px; font-weight: 300; color: rgba(255,255,255,0.6); max-width: 540px; margin-bottom: 48px; line-height: 1.7; }
+.partner-pills { display: flex; align-items: center; gap: 14px; padding: 24px 0; border-top: 1px solid rgba(255,255,255,0.1); flex-wrap: wrap; }
+.pill { font-family: var(--head); font-size: 12px; font-weight: 700; letter-spacing: .08em; color: var(--white); background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); padding: 9px 20px; border-radius: 40px; }
+.pill.dagny { border-color: rgba(201,168,76,0.4); color: var(--gold-l); }
+.pill.hoh { border-color: rgba(61,139,140,0.5); color: var(--teal-l); }
+.pill-sep { color: rgba(255,255,255,0.2); font-size: 20px; font-family: sans-serif; }
+
+/* SHARED */
+.wrap { max-width: 1100px; margin: 0 auto; }
+.tag { font-family: var(--head); font-size: 11px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--teal); margin-bottom: 18px; display: flex; align-items: center; gap: 10px; }
+.tag::before { content: ''; width: 20px; height: 1.5px; background: var(--teal); }
+h2.st { font-family: var(--head); font-size: clamp(26px, 3.5vw, 42px); font-weight: 800; line-height: 1.1; color: var(--navy); margin-bottom: 18px; letter-spacing: -.02em; }
+h2.st span { color: var(--teal); }
+.sub { font-size: 17px; color: var(--mid); line-height: 1.7; max-width: 540px; margin-bottom: 52px; }
+.btn-p { font-family: var(--head); font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; background: var(--teal); color: var(--white); border: none; padding: 16px 36px; cursor: pointer; text-decoration: none; display: inline-block; border-radius: 3px; transition: background .2s, transform .15s; }
+.btn-p:hover { background: var(--teal-l); transform: translateY(-2px); }
+
+/* TWO OFFERS */
+.offers-section { padding: 88px 48px; background: var(--off); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.offers-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.offer { background: var(--white); border: 1.5px solid var(--border); border-radius: 8px; padding: 44px 36px; display: flex; flex-direction: column; transition: transform .2s; }
+.offer:hover { transform: translateY(-3px); }
+.offer.featured { background: var(--navy); border-color: var(--navy); }
+.offer-badge { font-family: var(--head); font-size: 10px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--teal); margin-bottom: 8px; }
+.offer.featured .offer-badge { color: var(--gold-l); }
+.offer-dur { font-family: var(--head); font-size: 11px; color: #bbb; margin-bottom: 16px; }
+.offer.featured .offer-dur { color: rgba(255,255,255,0.3); }
+.offer-title { font-family: var(--head); font-size: 26px; font-weight: 800; color: var(--navy); margin-bottom: 14px; line-height: 1.15; }
+.offer.featured .offer-title { color: var(--white); }
+.offer-desc { font-size: 14px; color: var(--mid); line-height: 1.65; margin-bottom: 28px; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
+.offer.featured .offer-desc { color: rgba(255,255,255,0.45); border-color: rgba(255,255,255,0.1); }
+.offer-list { list-style: none; flex: 1; }
+.offer-list li { font-size: 13px; color: var(--mid); padding: 9px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; align-items: flex-start; line-height: 1.4; }
+.offer.featured .offer-list li { color: rgba(255,255,255,0.55); border-color: rgba(255,255,255,0.08); }
+.offer-list li::before { content: '–'; color: var(--teal); font-weight: 700; flex-shrink: 0; }
+.offer.featured .offer-list li::before { color: var(--gold-l); }
+.offer-list li:last-child { border-bottom: none; }
+.tl { margin-top: 24px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); }
+.tl-head { font-family: var(--head); font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-l); margin-bottom: 12px; }
+.tl-item { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 8px; }
+.tl-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; margin-top: 5px; }
+.tl-text { font-size: 12px; color: rgba(255,255,255,0.45); line-height: 1.4; }
+.tl-text strong { color: rgba(255,255,255,0.7); }
+
+/* SPLIT SECTION – Org vs Personal */
+.split-section { padding: 88px 48px; background: var(--white); border-bottom: 1px solid var(--border); }
+.split-label-row { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-bottom: 20px; }
+.split-label {
+  padding: 18px 32px; border-radius: 6px;
+  font-family: var(--head); font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  display: flex; align-items: center; gap: 10px;
+}
+.split-label.org { background: var(--gold-p); color: var(--navy); border: 1.5px solid rgba(201,168,76,0.3); }
+.split-label.pers { background: var(--teal-p); color: var(--teal); border: 1.5px solid rgba(61,139,140,0.3); }
+.split-label-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+.dot-org { background: var(--gold); }
+.dot-pers { background: var(--teal); }
+.split-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--border); border-radius: 8px; overflow: hidden; border: 1.5px solid var(--border); }
+.split-col { display: flex; flex-direction: column; gap: 2px; background: var(--border); }
+.split-card { padding: 36px 32px; }
+.split-card.gold-bg { background: var(--gold-p); }
+.split-card.teal-bg { background: var(--teal-p); }
+.split-card.white { background: var(--white); }
+.split-card.off { background: var(--off); }
+.sc-num { font-family: var(--head); font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+.split-card.teal-bg .sc-num, .split-card.off .sc-num { color: var(--teal); }
+.sc-title { font-family: var(--head); font-size: 18px; font-weight: 800; color: var(--navy); margin-bottom: 10px; line-height: 1.2; }
+.sc-desc { font-size: 14px; color: var(--mid); line-height: 1.65; }
+.sc-who { font-family: var(--head); font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; margin-top: 14px; color: var(--gold); }
+.split-card.teal-bg .sc-who, .split-card.off .sc-who { color: var(--teal); }
+
+/* DAY DETAIL */
+.day-section { padding: 88px 48px; background: var(--off); border-bottom: 1px solid var(--border); }
+.day-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--border); border-radius: 8px; overflow: hidden; border: 1.5px solid var(--border); }
+.day-half { padding: 48px 40px; }
+.day-half.gold-side { background: var(--gold-p); }
+.day-half.teal-side { background: var(--teal-p); }
+.day-time { font-family: var(--head); font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; margin-bottom: 8px; }
+.day-half.gold-side .day-time { color: var(--gold); }
+.day-half.teal-side .day-time { color: var(--teal); }
+.day-title { font-family: var(--head); font-size: 22px; font-weight: 800; margin-bottom: 6px; line-height: 1.2; color: var(--navy); }
+.day-who { font-family: var(--head); font-size: 12px; font-weight: 700; letter-spacing: .06em; margin-bottom: 24px; }
+.day-half.gold-side .day-who { color: var(--gold); }
+.day-half.teal-side .day-who { color: var(--teal); }
+.day-list { list-style: none; }
+.day-list li { font-size: 14px; color: var(--mid); padding: 9px 0; border-bottom: 1px solid rgba(0,0,0,0.06); display: flex; gap: 10px; align-items: flex-start; line-height: 1.4; }
+.day-list li::before { font-weight: 700; flex-shrink: 0; }
+.day-half.gold-side .day-list li::before { content: '–'; color: var(--gold); }
+.day-half.teal-side .day-list li::before { content: '–'; color: var(--teal); }
+.day-list li:last-child { border-bottom: none; }
+.lunch-bar { grid-column: 1 / -1; background: var(--navy); padding: 20px 40px; display: flex; align-items: center; gap: 14px; }
+.lunch-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+.lunch-text { font-family: var(--head); font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,0.6); }
+
+/* SHP */
+.shp-section { padding: 88px 48px; background: var(--white); border-bottom: 1px solid var(--border); }
+.shp-box { background: var(--off); border: 1.5px solid var(--border); border-radius: 8px; padding: 48px 44px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+.shp-badge { font-family: var(--head); font-size: 10px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--teal); margin-bottom: 14px; }
+.shp-title { font-family: var(--head); font-size: 22px; font-weight: 800; color: var(--navy); margin-bottom: 14px; }
+.shp-text { font-size: 14px; color: var(--mid); line-height: 1.65; margin-bottom: 14px; }
+.shp-link { font-family: var(--head); font-size: 12px; font-weight: 700; color: var(--teal); text-decoration: none; }
+.shp-link:hover { color: var(--teal-l); }
+.when-box { background: var(--white); border: 1.5px solid var(--border); border-radius: 6px; padding: 28px; }
+.when-title { font-family: var(--head); font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--teal); margin-bottom: 16px; }
+.when-list { list-style: none; }
+.when-list li { font-size: 13px; color: var(--mid); padding: 9px 0; border-bottom: 1px solid var(--border); display: flex; gap: 12px; line-height: 1.4; }
+.when-list li::before { content: '◆'; color: var(--teal); font-size: 7px; margin-top: 5px; flex-shrink: 0; }
+.when-list li:last-child { border-bottom: none; }
+
+/* CONTACT */
+.contact-section { background: var(--navy); padding: 88px 48px; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; max-width: 1100px; margin: 0 auto; align-items: start; }
+.contact-h2 { font-family: var(--head); font-size: clamp(26px, 3.5vw, 42px); font-weight: 800; color: var(--white); line-height: 1.1; margin-bottom: 20px; }
+.contact-h2 span { color: var(--teal-l); }
+.contact-lead { font-size: 16px; color: rgba(255,255,255,0.5); line-height: 1.7; margin-bottom: 32px; }
+.contacts { display: flex; flex-direction: column; gap: 0; }
+.cp { padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+.cp:last-child { border-bottom: none; }
+.cp-name { font-family: var(--head); font-size: 15px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
+.cp-role { font-family: var(--head); font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--teal-l); margin-bottom: 8px; }
+.cp-detail { font-size: 14px; color: rgba(255,255,255,0.4); }
+
+footer { background: var(--navy2); padding: 24px 48px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; border-top: 1px solid rgba(255,255,255,0.06); }
+.footer-logo { font-family: var(--head); font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,0.3); }
+.footer-copy { font-family: var(--head); font-size: 11px; color: rgba(255,255,255,0.2); }
+
+@media (max-width: 900px) {
+  nav { padding: 0 20px; }
+  section, .hero, .contact-section { padding-left: 20px; padding-right: 20px; }
+  .hero { padding-top: 108px; }
+  .offers-grid, .split-label-row, .split-grid, .day-grid, .shp-box, .contact-grid { grid-template-columns: 1fr; }
+  .lunch-bar { grid-column: 1; }
+  .split-col { gap: 12px; }
+  footer { padding: 20px; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; transform: none !important; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Dagny <span>Isberg</span></a>
+  <a href="index.html" class="nav-back">← Tillbaka</a>
+  <a href="#kontakt" class="nav-cta">Boka samtal</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <p class="hero-tag">Gemensamt program</p>
+    <h1 class="hero-h1">The Full Shift.<br><em>Kropp och hjärna. Hela bilden.</em></h1>
+    <p class="hero-lead">När organisationshälsa och personlig hälsa adresseras tillsammans händer något annat. Medarbetare förstår samspelet – och vet vad de kan göra åt det.</p>
+    <div class="partner-pills">
+      <span class="pill dagny">Dagny Isberg · Organisationshälsa</span>
+      <span class="pill-sep">×</span>
+      <span class="pill hoh">Head of Happiness · Personlig hälsa</span>
+    </div>
+  </div>
+</section>
+
+<!-- TWO OFFERS -->
+<section class="offers-section">
+  <div class="wrap">
+    <p class="tag">Två format</p>
+    <h2 class="st">En dag eller tre månader.</h2>
+    <p class="sub">Välj utifrån er situation. Heldagen ger en kraftfull start. Tremånadersprogrammet ger varaktig förändring.</p>
+    <div class="offers-grid">
+      <div class="offer">
+        <p class="offer-badge">Format 1</p>
+        <p class="offer-dur">1 dag · På plats</p>
+        <h3 class="offer-title">The Full Shift Day</h3>
+        <p class="offer-desc">En komplett heldag där Dagny och Head of Happiness tar gruppen igenom organisationshälsa, kropp, stress och levnadsvanor.</p>
+        <ul class="offer-list">
+          <li>Föreläsning organisationshälsa &amp; ergonomi (Dagny, fm)</li>
+          <li>Ergonomiworkshop – praktiska övningar</li>
+          <li>Föreläsning stress, hjärna &amp; levnadsvanor (HoH, em)</li>
+          <li>Individuell hälsoscreening (KEDS)</li>
+          <li>Screening organisationshälsa (OSA-enkäten)</li>
+          <li>Rapport till HR</li>
+          <li>Introduktion till 4 veckors nudging (HoH)</li>
+        </ul>
+      </div>
+      <div class="offer featured">
+        <p class="offer-badge">Format 2 · Rekommenderat</p>
+        <p class="offer-dur">3 månader · Kontinuerligt stöd</p>
+        <h3 class="offer-title">The Full Shift Program</h3>
+        <p class="offer-desc">The Full Shift Day är starten. Sedan jobbar Dagny och Head of Happiness med er organisation i tre månader – tills förändringen faktiskt fastnar.</p>
+        <ul class="offer-list">
+          <li>The Full Shift Day (ingår fullt ut)</li>
+          <li>Individuella samtal 20 min/person (Dagny)</li>
+          <li>Anonymt aggregerad rapport – KEDS &amp; OSA</li>
+          <li>Återkoppling till ledningsgruppen (Dagny)</li>
+          <li>Rekommendationer &amp; handlingsplan</li>
+          <li>8 veckors dagliga mentala övningar via nudging (HoH)</li>
+          <li>Digitalt fördjupningsprogram 3 mån (HoH)</li>
+          <li>Uppföljningsbesök på plats, månad 2 (Dagny)</li>
+          <li>Avslutande screening – mätning av förändring</li>
+        </ul>
+        <div class="tl">
+          <p class="tl-head">Månadsplan</p>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-text"><strong>Månad 1</strong> – The Full Shift Day + individuella samtal + screening + nudging startar</div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-text"><strong>Månad 2</strong> – Återkoppling till ledning + handlingsplan + uppföljning + nudging period 2</div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-text"><strong>Månad 3</strong> – Digitalt program + implementering + avslutande screening</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPLIT: ORG vs PERSONAL -->
+<section class="split-section">
+  <div class="wrap">
+    <p class="tag">Två kompetenser – ett program</p>
+    <h2 class="st">Organisationshälsa <span>möter</span> personlig hälsa.</h2>
+    <p class="sub">Dagny arbetar med organisationen och kroppen. Head of Happiness arbetar med individen och hjärnan. Tillsammans täcker de hela bilden.</p>
+    <div class="split-label-row">
+      <div class="split-label org"><span class="split-label-dot dot-org"></span>Organisationshälsa · Dagny Isberg</div>
+      <div class="split-label pers"><span class="split-label-dot dot-pers"></span>Personlig hälsa · Head of Happiness</div>
+    </div>
+    <div class="split-grid">
+      <div class="split-col">
+        <div class="split-card gold-bg">
+          <p class="sc-num">01 · Föreläsning</p>
+          <h3 class="sc-title">Kropp, ergonomi &amp; MTO</h3>
+          <p class="sc-desc">En mindshift som öppnar ögonen. Medarbetare förstår varför kroppen reagerar som den gör – och vad arbetsgivaren kan göra.</p>
+          <p class="sc-who">Dagny Isberg</p>
+        </div>
+        <div class="split-card white">
+          <p class="sc-num">02 · Screening</p>
+          <h3 class="sc-title">KEDS + OSA-enkäten</h3>
+          <p class="sc-desc">Insikt i individuell hälsa och organisationens mående. Rapport till HR.</p>
+          <p class="sc-who">Dagny Isberg</p>
+        </div>
+        <div class="split-card gold-bg">
+          <p class="sc-num">05 · Återkoppling</p>
+          <h3 class="sc-title">Spegeln till ledningen</h3>
+          <p class="sc-desc">Anonymt aggregerat. Konkreta rekommendationer och dialog om nästa steg.</p>
+          <p class="sc-who">Dagny Isberg</p>
+        </div>
+      </div>
+      <div class="split-col">
+        <div class="split-card teal-bg">
+          <p class="sc-num">03 · Föreläsning</p>
+          <h3 class="sc-title">Stress, hjärna &amp; levnadsvanor</h3>
+          <p class="sc-desc">Vad är stress egentligen? Vad händer i kroppen – och vad kan varje individ göra för att ta makten över sitt välmående.</p>
+          <p class="sc-who">Head of Happiness</p>
+        </div>
+        <div class="split-card off">
+          <p class="sc-num">04 · Nudging + program</p>
+          <h3 class="sc-title">Dagliga mentala övningar</h3>
+          <p class="sc-desc">2 × 4 veckor med övningar direkt till mobilen. Plus digitalt fördjupningsprogram i 3 månader.</p>
+          <p class="sc-who">Head of Happiness</p>
+        </div>
+        <div class="split-card teal-bg">
+          <p class="sc-num">Gemensamt</p>
+          <h3 class="sc-title">Medarbetar- &amp; arbetsgivaransvar</h3>
+          <p class="sc-desc">Lunch och gemensam reflektion binder ihop perspektiven. Både individen och organisationen tar ansvar.</p>
+          <p class="sc-who">Dagny Isberg × Head of Happiness</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DAY DETAIL -->
+<section class="day-section">
+  <div class="wrap">
+    <p class="tag">Heldagens upplägg</p>
+    <h2 class="st">Förmiddag kroppen.<br><span>Eftermiddag hjärnan.</span></h2>
+    <p class="sub" style="margin-bottom: 40px;">Lunch binder ihop perspektiven – gemensam reflektion om medarbetar- och arbetsgivaransvar.</p>
+    <div class="day-grid">
+      <div class="day-half gold-side">
+        <p class="day-time">Förmiddag · 09.00–12.00</p>
+        <h3 class="day-title">Organisationshälsa, kropp &amp; ergonomi</h3>
+        <p class="day-who">Dagny Isberg</p>
+        <ul class="day-list">
+          <li>Föreläsning: kroppen, ergonomi &amp; MTO-perspektivet</li>
+          <li>Ergonomiworkshop – konkreta övningar på plats</li>
+          <li>Individuell hälsoscreening (KEDS)</li>
+          <li>OSA-enkäten – organisationshälsa</li>
+        </ul>
+      </div>
+      <div class="day-half teal-side">
+        <p class="day-time">Eftermiddag · 13.00–16.00</p>
+        <h3 class="day-title">Personlig hälsa, stress &amp; levnadsvanor</h3>
+        <p class="day-who">Head of Happiness</p>
+        <ul class="day-list">
+          <li>Föreläsning: stress, prestation &amp; välmående</li>
+          <li>Levnadsvanor &amp; egenmakt – vad kan jag göra själv?</li>
+          <li>Introduktion: 4 veckors dagliga mentala övningar</li>
+          <li>Tillgång till digitalt fördjupningsprogram</li>
+        </ul>
+      </div>
+      <div class="lunch-bar">
+        <div class="lunch-dot"></div>
+        <span class="lunch-text">Lunch &amp; gemensam reflektion · 12.00–13.00 · Medarbetar- och arbetsgivaransvar</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SHP -->
+<section class="shp-section">
+  <div class="wrap">
+    <p class="tag">Om screeningen visar mer</p>
+    <h2 class="st">Ni står aldrig ensamma.</h2>
+    <p class="sub" style="margin-bottom: 40px;">Ibland räcker ett program. Ibland visar screeningen att kulturen eller ledarskapet behöver förändras på djupet.</p>
+    <div class="shp-box">
+      <div>
+        <p class="shp-badge">Organisationskultur &amp; ledarskap</p>
+        <h3 class="shp-title">Svenska Hälsopromotionsgruppen</h3>
+        <p class="shp-text">Om OSA-enkäten visar att kulturen eller ledarskapet behöver förändras på djupet kan Svenska Hälsopromotionsgruppen kliva in. De jobbar med ett salutogent synsätt och hjälper organisationer att förflytta kulturen från rädsla till tillit.</p>
+        <p class="shp-text">Salutprogrammet® involverar hela organisationen via gruppmöten med inspirationsfilmer och dialogfrågor.</p>
+        <a href="https://halsopromotion.se" target="_blank" class="shp-link">halsopromotion.se →</a>
+      </div>
+      <div class="when-box">
+        <p class="when-title">Kan vara relevant när</p>
+        <ul class="when-list">
+          <li>OSA-enkäten visar lågt förtroende för ledarskapet</li>
+          <li>Det finns tydliga kulturella hinder för förändring</li>
+          <li>Teamdynamik och samarbetsklimat behöver stärkas</li>
+          <li>Ni vill jobba långsiktigt och systematiskt med hälsokultur</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="kontakt">
+  <div class="contact-grid">
+    <div>
+      <p class="tag" style="color: var(--teal-l);">Boka The Full Shift</p>
+      <h2 class="contact-h2">Redo att ge era medarbetare <span>hela bilden?</span></h2>
+      <p class="contact-lead">Hör av dig till Dagny eller Lisa – vi berättar mer och tar fram ett upplägg som passar just er organisation.</p>
+      <a href="mailto:hej@dagengry.com" class="btn-p">Skicka ett mail</a>
+    </div>
+    <div class="contacts">
+      <div class="cp">
+        <p class="cp-name">Dagny Isberg</p>
+        <p class="cp-role">Organisationshälsa · Kropp &amp; ergonomi</p>
+        <p class="cp-detail">hej@dagengry.com</p>
+        <p class="cp-detail">0735 144 090</p>
+      </div>
+      <div class="cp">
+        <p class="cp-name">Lisa · Head of Happiness</p>
+        <p class="cp-role">Personlig hälsa · Stress &amp; levnadsvanor</p>
+        <p class="cp-detail">lisa@headofhappiness.se</p>
+        <p class="cp-detail">0708 200 894</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="footer-logo">Dagny Isberg × Head of Happiness</span>
+  <span class="footer-copy">© 2026 · Kungsbacka · Göteborg · Varberg</span>
+</footer>
+
+</body>
+</html>
