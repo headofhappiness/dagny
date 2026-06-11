@@ -70,7 +70,16 @@ nav {
   background: linear-gradient(135deg, transparent 40%, rgba(61,139,140,0.12) 100%);
   pointer-events: none;
 }
-.hero-inner { max-width: 1100px; margin: 0 auto; }
+/* hero two-col */
+.hero-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 380px; gap: 64px; align-items: center; }
+.hero-img-wrap { position: relative; }
+.hero-img-box {
+  width: 100%; aspect-ratio: 3/4; border-radius: 8px;
+  background: rgba(255,255,255,0.06); border: 2px dashed rgba(201,168,76,0.3);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px;
+}
+.hero-img-box span { font-family: var(--head); font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,0.25); text-align: center; }
+.hero-img-box svg { opacity: 0.2; }
 .hero-tag {
   display: inline-flex; align-items: center; gap: 10px;
   font-family: var(--head); font-size: 11px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase;
@@ -362,6 +371,8 @@ footer { background: var(--navy2); padding: 24px 48px; display: flex; justify-co
   .nav-links { display: none; }
   .hero, section, .partner-cta, .services-section, .contact-section { padding-left: 20px; padding-right: 20px; }
   .hero { padding-top: 108px; padding-bottom: 60px; }
+  .hero-inner { grid-template-columns: 1fr !important; }
+  .hero-img-wrap { display: none; }
   .mto-grid, .stats, .steps-row, .pkg-grid, .about-grid, .contact-grid, .svc-grid, .myth-grid { grid-template-columns: 1fr !important; }
   .partner-cta-inner { grid-template-columns: 1fr !important; }
   .svc-sub-grid { grid-template-columns: 1fr; }
@@ -392,18 +403,26 @@ footer { background: var(--navy2); padding: 24px 48px; display: flex; justify-co
 <!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
-    <p class="hero-tag">Konsult Arbetshälsa &amp; Ergonomi</p>
-    <h1 class="hero-h1">Kroppen berättar.<br><em>Hon lyssnar.</em></h1>
-    <p class="hero-lead">Dagny Isberg förstår vardagen inifrån – hur det känns att sitta i för många möten, bära på för mycket och ändå alltid försöka prestera sitt bästa. Trots stress och värk. Med ett helhetsperspektiv som få besitter hjälper hon medarbetare och ledning att förstå vad som faktiskt skapar belastning – och vad ni kan göra åt det.</p>
-    <div class="hero-btns">
-      <a href="#hur-det-funkar" class="btn-primary">Så här funkar det</a>
-      <a href="#kontakt" class="btn-ghost">Boka samtal</a>
+    <div class="hero-text">
+      <p class="hero-tag">Konsult Arbetshälsa &amp; Ergonomi</p>
+      <h1 class="hero-h1">Kroppen berättar.<br><em>Hon lyssnar.</em></h1>
+      <p class="hero-lead">Dagny Isberg förstår vardagen inifrån – hur det känns att sitta i för många möten, bära på för mycket och ändå alltid försöka prestera sitt bästa. Trots stress och värk. Med ett helhetsperspektiv som få besitter hjälper hon medarbetare och ledning att förstå vad som faktiskt skapar belastning – och vad ni kan göra åt det.</p>
+      <div class="hero-btns">
+        <a href="#hur-det-funkar" class="btn-primary">Så här funkar det</a>
+        <a href="#kontakt" class="btn-ghost">Boka samtal</a>
+      </div>
+      <div class="hero-proof">
+        <span class="proof-item"><span class="proof-dot"></span>Evidensbaserat</span>
+        <span class="proof-item"><span class="proof-dot"></span>15 år senior HR-konsult</span>
+        <span class="proof-item"><span class="proof-dot"></span>MTO-perspektiv</span>
+        <span class="proof-item"><span class="proof-dot"></span>Kungsbacka · Göteborg · Varberg</span>
+      </div>
     </div>
-    <div class="hero-proof">
-      <span class="proof-item"><span class="proof-dot"></span>Evidensbaserat</span>
-      <span class="proof-item"><span class="proof-dot"></span>15 år senior HR-konsult</span>
-      <span class="proof-item"><span class="proof-dot"></span>MTO-perspektiv</span>
-      <span class="proof-item"><span class="proof-dot"></span>Kungsbacka · Göteborg · Varberg</span>
+    <div class="hero-img-wrap">
+      <div class="hero-img-box">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+        <span>Foto på Dagny<br>läggs in här</span>
+      </div>
     </div>
   </div>
 </section>

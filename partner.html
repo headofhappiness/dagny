@@ -255,7 +255,15 @@ footer { background: var(--navy2); padding: 24px 48px; display: flex; justify-co
 .footer-logo { font-family: var(--head); font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,0.3); }
 .footer-copy { font-family: var(--head); font-size: 11px; color: rgba(255,255,255,0.2); }
 
-/* nudging detail grid */
+/* partner hero two-col */
+.partner-hero-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+.partner-photos { display: grid; grid-template-columns: 1fr; max-width: 320px; margin-left: auto; }
+.partner-photo-box {
+  border-radius: 8px;
+  background: rgba(255,255,255,0.06); border: 2px dashed rgba(201,168,76,0.3);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px;
+  min-height: 520px;
+}
 .nudging-grid { margin-top:6px; display:grid; grid-template-columns:1fr 1fr; gap:6px; }
 
 @media (max-width: 900px) {
@@ -266,6 +274,8 @@ footer { background: var(--navy2); padding: 24px 48px; display: flex; justify-co
   .hero-lead { font-size: 16px; }
   .partner-pills { flex-direction: column; gap: 10px; align-items: flex-start; }
   .pill-sep { display: none; }
+  .partner-hero-inner { grid-template-columns: 1fr !important; }
+  .partner-photos { display: none; }
   .offers-grid, .split-label-row, .split-grid, .day-grid, .shp-box, .contact-grid, .steps-row, .stat-grid, .nudging-grid { grid-template-columns: 1fr !important; }
   .shp-box { padding: 28px 20px; }
   .shp-section { padding: 56px 20px; }
@@ -288,15 +298,23 @@ footer { background: var(--navy2); padding: 24px 48px; display: flex; justify-co
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-inner">
-    <p class="hero-tag">Gemensamt program</p>
-    <h1 class="hero-h1">The Full Shift.<br><em>Arbetsmiljö &amp; personlig hälsa.</em></h1>
-    <p class="hero-lead">När organisationshälsa och personlig hälsa adresseras tillsammans händer något annat. Medarbetare förstår samspelet – och vet vad de kan göra åt det.</p>
-    <p style="font-family:var(--head); font-size:clamp(18px,2.5vw,26px); font-weight:800; color:var(--gold-l); margin-bottom:40px; letter-spacing:-.01em;">Vi ger er helheten.</p>
-    <div class="partner-pills" style="padding-bottom:0;">
-      <span class="pill dagny">Dagny Isberg · Organisationshälsa</span>
-      <span class="pill-sep">×</span>
-      <span class="pill hoh">Head of Happiness · Personlig hälsa</span>
+  <div class="partner-hero-inner">
+    <div>
+      <p class="hero-tag">Gemensamt program</p>
+      <h1 class="hero-h1">The Full Shift.<br><em>Arbetsmiljö &amp; personlig hälsa.</em></h1>
+      <p class="hero-lead">När organisationshälsa och personlig hälsa adresseras tillsammans händer något annat. Medarbetare förstår samspelet – och vet vad de kan göra åt det.</p>
+      <p style="font-family:var(--head); font-size:clamp(18px,2.5vw,26px); font-weight:800; color:var(--gold-l); margin-bottom:40px; letter-spacing:-.01em;">Vi ger er helheten.</p>
+      <div class="partner-pills" style="padding-bottom:0;">
+        <span class="pill dagny">Dagny Isberg · Organisationshälsa</span>
+        <span class="pill-sep">×</span>
+        <span class="pill hoh">Head of Happiness · Personlig hälsa</span>
+      </div>
+    </div>
+    <div class="partner-photos">
+      <div class="partner-photo-box" style="aspect-ratio: 4/3;">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><circle cx="9" cy="8" r="3.5"/><circle cx="15" cy="8" r="3.5"/><path d="M2 20c0-4 3-6.5 7-6.5s7 2.5 7 6.5"/><path d="M16 14c2 .5 4 2 4 6"/></svg>
+        <span>Gemensamt foto<br>Dagny &amp; Lisa<br>läggs in här</span>
+      </div>
     </div>
   </div>
 </section>
