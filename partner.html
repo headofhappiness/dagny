@@ -276,6 +276,7 @@ footer { background: var(--navy2); padding: 24px 48px; display: flex; justify-co
   .pill-sep { display: none; }
   .partner-hero-inner { grid-template-columns: 1fr !important; }
   .partner-photos { display: none; }
+  .team-grid { grid-template-columns: 1fr !important; }
   .offers-grid, .split-label-row, .split-grid, .day-grid, .shp-box, .contact-grid, .steps-row, .stat-grid, .nudging-grid { grid-template-columns: 1fr !important; }
   .shp-box { padding: 28px 20px; }
   .shp-section { padding: 56px 20px; }
@@ -311,10 +312,7 @@ footer { background: var(--navy2); padding: 24px 48px; display: flex; justify-co
       </div>
     </div>
     <div class="partner-photos">
-      <div class="partner-photo-box" style="aspect-ratio: 4/3;">
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><circle cx="9" cy="8" r="3.5"/><circle cx="15" cy="8" r="3.5"/><path d="M2 20c0-4 3-6.5 7-6.5s7 2.5 7 6.5"/><path d="M16 14c2 .5 4 2 4 6"/></svg>
-        <span>Gemensamt foto<br>Dagny &amp; Lisa<br>läggs in här</span>
-      </div>
+      <img src="venn.png" alt="The Full Shift – Organisationshälsa möter Personlig hälsa" style="width:100%; border-radius:8px; display:block;">
     </div>
   </div>
 </section>
@@ -405,6 +403,41 @@ footer { background: var(--navy2); padding: 24px 48px; display: flex; justify-co
       </div>
     </div>
 
+  </div>
+</section>
+
+<!-- TEAMET -->
+<section style="padding: 88px 48px; background: var(--white); border-bottom: 1px solid var(--border);">
+  <div class="wrap">
+    <p class="tag">Bakom programmet</p>
+    <h2 class="st" style="color:var(--navy);">Två personer.<br><span style="color:var(--teal);">Ett gemensamt syfte.</span></h2>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:32px; margin-top:48px;" class="team-grid">
+
+      <div style="background:var(--off); border-radius:8px; overflow:hidden; border:1.5px solid var(--border);">
+        <div style="background:rgba(201,168,76,0.1); border-bottom:1.5px solid var(--border); height:320px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px;">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+          <span style="font-family:var(--head); font-size:10px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:rgba(201,168,76,0.5);">Foto på Dagny</span>
+        </div>
+        <div style="padding:28px 32px;">
+          <p style="font-family:var(--head); font-size:10px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); margin-bottom:8px;">Organisationshälsa</p>
+          <h3 style="font-family:var(--head); font-size:20px; font-weight:800; color:var(--navy); margin-bottom:10px;">Dagny Isberg</h3>
+          <p style="font-size:14px; color:var(--mid); line-height:1.65;">Senior HR-konsult och specialist inom organisationshälsa och belastningsergonomi. Förstår organisationen inifrån – och kroppen på riktigt.</p>
+        </div>
+      </div>
+
+      <div style="background:var(--off); border-radius:8px; overflow:hidden; border:1.5px solid var(--border);">
+        <div style="background:rgba(61,139,140,0.08); border-bottom:1.5px solid var(--border); height:320px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px;">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#3d8b8c" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+          <span style="font-family:var(--head); font-size:10px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:rgba(61,139,140,0.5);">Foto på Lisa</span>
+        </div>
+        <div style="padding:28px 32px;">
+          <p style="font-family:var(--head); font-size:10px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--teal); margin-bottom:8px;">Personlig hälsa</p>
+          <h3 style="font-family:var(--head); font-size:20px; font-weight:800; color:var(--navy); margin-bottom:10px;">Lisa Jonsson</h3>
+          <p style="font-size:14px; color:var(--mid); line-height:1.65;">Grundare av Head of Happiness. Specialist inom stresshantering, levnadsvanor och välmående. Evidensbaserat och rekommenderat av specialistläkare.</p>
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
 
