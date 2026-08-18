@@ -264,7 +264,8 @@ footer { background: var(--navy2); padding: 24px 48px; display: flex; justify-co
   display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px;
   min-height: 520px;
 }
-.nudging-grid { margin-top:6px; display:grid; grid-template-columns:1fr 1fr; gap:6px; }
+.nudging-grid { margin-top:6px; display:grid; grid-template-columns:repeat(3, 1fr); gap:6px; }
+.kla-tag { font-family: var(--head); font-size: 11px; font-weight: 600; letter-spacing: .04em; padding: 6px 14px; border-radius: 20px; background: var(--teal-p); color: var(--teal); display: inline-block; }
 
 @media (max-width: 900px) {
   nav { padding: 0 20px; }
@@ -279,7 +280,7 @@ footer { background: var(--navy2); padding: 24px 48px; display: flex; justify-co
   .why-together-grid { grid-template-columns: 1fr !important; }
   .why-together-grid > div:first-child { border-radius: 8px 8px 0 0 !important; }
   .why-together-grid > div:last-child { border-radius: 0 !important; }
-  .offers-grid, .split-label-row, .split-grid, .day-grid, .shp-box, .contact-grid, .steps-row, .stat-grid, .nudging-grid { grid-template-columns: 1fr !important; }
+  .offers-grid, .split-label-row, .split-grid, .day-grid, .shp-box, .contact-grid, .steps-row, .stat-grid, .nudging-grid, .kla-grid { grid-template-columns: 1fr !important; }
   .shp-box { padding: 28px 20px; }
   .shp-section { padding: 56px 20px; }
   .lunch-bar { grid-column: 1; }
@@ -304,12 +305,12 @@ footer { background: var(--navy2); padding: 24px 48px; display: flex; justify-co
   <div class="hero-inner">
     <p class="hero-tag">Gemensamt program</p>
     <h1 class="hero-h1">The Full Shift.<br><em>Arbetsmiljö &amp; personlig hälsa.</em></h1>
-    <p class="hero-lead">När organisationshälsa och personlig hälsa adresseras tillsammans händer något annat. Medarbetare förstår samspelet – och vet vad de kan göra åt det.</p>
+    <p class="hero-lead">När kroppen och sinnet adresseras tillsammans händer något annat. Medarbetare förstår samspelet – och vet vad de kan göra åt det.</p>
     <p style="font-family:var(--head); font-size:clamp(18px,2.5vw,26px); font-weight:800; color:var(--gold-l); margin-bottom:40px; letter-spacing:-.01em;">Vi ger er helheten.</p>
     <div class="partner-pills" style="padding-bottom:0;">
-      <span class="pill dagny">Dagny Isberg · Organisationshälsa</span>
+      <span class="pill dagny">Dagny Isberg · Personlig hälsa – kroppen</span>
       <span class="pill-sep">×</span>
-      <span class="pill hoh">Head of Happiness · Personlig hälsa</span>
+      <span class="pill hoh">Head of Happiness · Personlig hälsa – stress &amp; vanor</span>
     </div>
   </div>
 </section>
@@ -319,16 +320,17 @@ footer { background: var(--navy2); padding: 24px 48px; display: flex; justify-co
 <section style="padding:88px 48px; background:var(--white); border-bottom:1px solid var(--border);">
   <div class="wrap">
     <p class="tag">Två kompetenser – ett program</p>
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:4px; margin-top:32px;" class="why-together-grid">
+    <p class="sub" style="margin-top:-8px;">Vi vet att HR:s beslut alltid handlar om två saker: ekonomi och hälsa. Dagny och Lisa pratar båda språken.</p>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:4px; margin-top:8px;" class="why-together-grid">
       <div style="background:var(--gold); border-radius:8px 0 0 0; padding:40px 36px;">
-        <p style="font-family:var(--head); font-size:11px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:rgba(34,52,78,0.5); margin:0 0 14px;">Dagny Isberg</p>
-        <h3 style="font-family:var(--head); font-size:24px; font-weight:800; color:var(--navy); margin:0 0 16px; line-height:1.2;">Organisations-<br>hälsa</h3>
-        <p style="font-size:14px; color:rgba(34,52,78,0.7); margin:0; line-height:1.65;">Kropp, ergonomi och arbetsmiljö. Förstår hur organisationen faktiskt fungerar – inte bara i teorin.</p>
+        <p style="font-family:var(--head); font-size:11px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:rgba(34,52,78,0.5); margin:0 0 14px;">Dagny Isberg · Ergonom med bakgrund från HR</p>
+        <h3 style="font-family:var(--head); font-size:24px; font-weight:800; color:var(--navy); margin:0 0 16px; line-height:1.2;">Personlig hälsa.<br><em style="font-weight:400; font-style:italic; opacity:.85;">Kroppen som utgångspunkt.</em></h3>
+        <p style="font-size:14px; color:rgba(34,52,78,0.7); margin:0; line-height:1.65;">Kropp, ergonomi och arbetsmiljö. Med egen bakgrund som HR-chef förstår Dagny hur organisationen faktiskt fungerar – inte bara i teorin.</p>
       </div>
       <div style="background:var(--teal); border-radius:0 8px 0 0; padding:40px 36px;">
-        <p style="font-family:var(--head); font-size:11px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,0.4); margin:0 0 14px;">Head of Happiness</p>
-        <h3 style="font-family:var(--head); font-size:24px; font-weight:800; color:var(--white); margin:0 0 16px; line-height:1.2;">Personlig<br>hälsa</h3>
-        <p style="font-size:14px; color:rgba(255,255,255,0.75); margin:0; line-height:1.65;">Stress, levnadsvanor och välmående. Evidensbaserat och rekommenderat av specialistläkare.</p>
+        <p style="font-family:var(--head); font-size:11px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,0.4); margin:0 0 14px;">Lisa Jonsson · Ekonom &amp; hälsopromotör</p>
+        <h3 style="font-family:var(--head); font-size:24px; font-weight:800; color:var(--white); margin:0 0 16px; line-height:1.2;">Personlig hälsa.<br><em style="font-weight:400; font-style:italic; opacity:.85;">Stress &amp; levnadsvanor i fokus.</em></h3>
+        <p style="font-size:14px; color:rgba(255,255,255,0.75); margin:0; line-height:1.65;">Stress, levnadsvanor och välmående. Med ekonombakgrund vet Lisa att hälsosatsningar också måste räknas hem. Evidensbaserat och rekommenderat av specialistläkare.</p>
       </div>
     </div>
     <div style="background:var(--navy); border-radius:0 0 8px 8px; padding:28px 36px; text-align:center;">
@@ -380,8 +382,8 @@ footer { background: var(--navy2); padding: 24px 48px; display: flex; justify-co
         <div class="step-num" style="color:var(--navy);">04</div>
         <p class="step-label" style="color:var(--gold);">Individuella samtal</p>
         <div class="step-divider" style="background:rgba(201,168,76,0.4);"></div>
-        <h3 class="step-title" style="color:var(--navy);">20 min med varje person</h3>
-        <p class="step-desc" style="color:var(--mid);">Dagny lyssnar in varje medarbetare – behov, situation och upplevelse. Det finns nästan aldrig bara en orsak till besvär.</p>
+        <h3 class="step-title" style="color:var(--navy);">Vem är du? Vad vill du?</h3>
+        <p class="step-desc" style="color:var(--mid);">20 minuter per person. Dagny lyssnar in och startar med en KLA-kroppsanalys – för att se hur kroppen faktiskt mår, inte bara vad den säger.</p>
         <p class="step-sub" style="border-top:1px solid rgba(201,168,76,0.25); color:var(--gold);">Dagny Isberg</p>
       </div>
 
@@ -407,7 +409,7 @@ footer { background: var(--navy2); padding: 24px 48px; display: flex; justify-co
 
     <!-- NUDGING FÖRDJUPNING -->
     <div style="margin-top:32px; margin-bottom:12px; display:flex; align-items:center; gap:14px;">
-      <span style="font-family:var(--head); font-size:11px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--teal-l);">03 · Nudging &amp; program – i detalj</span>
+      <span style="font-family:var(--head); font-size:11px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--teal-l);">03 · Nudging, program &amp; aktiviteter – i detalj</span>
       <span style="flex:1; height:1px; background:rgba(61,139,140,0.25);"></span>
     </div>
     <div class="nudging-grid">
@@ -418,8 +420,40 @@ footer { background: var(--navy2); padding: 24px 48px; display: flex; justify-co
       </div>
       <div style="background:var(--navy); border:1.5px solid rgba(201,168,76,0.2); border-radius:8px; padding:36px 32px;">
         <p style="font-family:var(--head); font-size:10px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--gold-l); margin-bottom:12px;">Digitalt program · 3 månader</p>
-        <h4 style="font-family:var(--head); font-size:17px; font-weight:800; color:var(--white); margin-bottom:14px; line-height:1.2;">Fördjupning inom stresshantering och välmående.</h4>
-        <p style="font-size:14px; color:rgba(255,255,255,0.65); line-height:1.65;">Evidensbaserat självinstruerande utbildnings- &amp; träningsprogram. Rekommenderat av specialistläkare.</p>
+        <h4 style="font-family:var(--head); font-size:17px; font-weight:800; color:var(--white); margin-bottom:14px; line-height:1.2;">Fördjupning inom stresshantering och mental styrka.</h4>
+        <p style="font-size:14px; color:rgba(255,255,255,0.65); line-height:1.65;">Evidensbaserat självinstruerande utbildnings- &amp; träningsprogram, rekommenderat av specialistläkare. Tillsammans med Dagnys kroppsfokus blir det en stark kombo för både kropp och sinne.</p>
+      </div>
+      <div style="background:var(--gold-p); border:1.5px solid rgba(201,168,76,0.3); border-radius:8px; padding:36px 32px;">
+        <p style="font-family:var(--head); font-size:10px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--gold); margin-bottom:12px;">Medarbetardrivna aktiviteter · löpande</p>
+        <h4 style="font-family:var(--head); font-size:17px; font-weight:800; color:var(--navy); margin-bottom:14px; line-height:1.2;">Var och en bidrar med sin styrka.</h4>
+        <p style="font-size:14px; color:var(--mid); line-height:1.65;">Någon leder yoga en gång i veckan. Någon annan leder en promenad. Engagemang växer när medarbetare får bidra med det de själva brinner för – men det behöver en tydlig basstruktur för att hålla i sig. Dagny och Lisa sätter ramarna: vem gör vad, hur ofta, och vem som håller ihop det över tid.</p>
+      </div>
+    </div>
+
+    <!-- INDIVIDUELLA SAMTAL – I DETALJ -->
+    <div style="margin-top:32px; margin-bottom:12px; display:flex; align-items:center; gap:14px;">
+      <span style="font-family:var(--head); font-size:11px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--teal-l);">04 · Individuella samtal – i detalj</span>
+      <span style="flex:1; height:1px; background:rgba(61,139,140,0.25);"></span>
+    </div>
+    <div class="kla-grid" style="background:var(--white); border:1.5px solid var(--border); border-radius:8px; padding:40px 36px; display:grid; grid-template-columns:1fr 1fr; gap:40px;">
+      <div>
+        <h4 style="font-family:var(--head); font-size:22px; font-weight:800; color:var(--navy); margin-bottom:14px; line-height:1.3;">Vem är du?<br>Vad vill du?<br><span style="color:var(--teal);">Vad behöver du?</span></h4>
+        <p style="font-size:14px; color:var(--mid); line-height:1.7; margin-bottom:14px;">Individanpassning är kärnan i samtalet. Innan Dagny föreslår något lyssnar hon in varje person – och gör en <strong style="color:var(--navy);">KLA-kroppsanalys</strong>. KLA står för kroppens longitudinella axel: den tänkta linjen som löper genom kroppen från hjässan till fötterna. Analysen visar bålstabilitet och balans – om kroppen är centrerad eller felbelastad.</p>
+        <p style="font-size:14px; color:var(--mid); line-height:1.7;">Det finns nästan aldrig bara en orsak till besvär.</p>
+      </div>
+      <div>
+        <p style="font-family:var(--head); font-size:10px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--teal); margin-bottom:14px;">Vad Dagny går igenom</p>
+        <div style="display:flex; flex-wrap:wrap; gap:8px;">
+          <span class="kla-tag">Kondition</span>
+          <span class="kla-tag">Vikt &amp; längd</span>
+          <span class="kla-tag">Kroppshållning (KLA)</span>
+          <span class="kla-tag">Var det gör ont</span>
+          <span class="kla-tag">Stress – arbete &amp; privat</span>
+          <span class="kla-tag">Sömn</span>
+          <span class="kla-tag">Rörelsevanor</span>
+          <span class="kla-tag">Kost</span>
+          <span class="kla-tag">Alkohol</span>
+        </div>
       </div>
     </div>
 
@@ -465,13 +499,13 @@ footer { background: var(--navy2); padding: 24px 48px; display: flex; justify-co
     <div class="contacts">
       <div class="cp">
         <p class="cp-name">Dagny Isberg</p>
-        <p class="cp-role">Organisationshälsa · Kropp &amp; ergonomi</p>
+        <p class="cp-role">Ergonom med bakgrund från HR · Kropp &amp; ergonomi</p>
         <p class="cp-detail">hej@dagengry.com</p>
         <p class="cp-detail">0735 144 090</p>
       </div>
       <div class="cp">
         <p class="cp-name">Lisa Jonsson · Head of Happiness</p>
-        <p class="cp-role">Personlig hälsa · Stress &amp; levnadsvanor</p>
+        <p class="cp-role">Ekonom &amp; hälsopromotör · Stress &amp; levnadsvanor</p>
         <p class="cp-detail">lisa@headofhappiness.se</p>
         <p class="cp-detail">0708 200 894</p>
       </div>
